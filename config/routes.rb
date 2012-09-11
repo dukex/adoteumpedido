@@ -1,4 +1,6 @@
 AdoteSeuPedido::Application.routes.draw do
+  devise_for :users
+
   resources :fois
 
   # The priority is based upon order of creation:
