@@ -1,0 +1,2 @@
+module FoisHelper
+end

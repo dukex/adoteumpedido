@@ -1,0 +1,27 @@
+<h1>Listing fois</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Org</th>
+    <th>Observation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fois.each do |foi| %>
+  <tr>
+    <td><%= foi.description %></td>
+    <td><%= foi.org %></td>
+    <td><%= foi.observation %></td>
+    <td><%= link_to 'Show', foi %></td>
+    <td><%= link_to 'Edit', edit_foi_path(foi) %></td>
+    <td><%= link_to 'Destroy', foi, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Foi', new_foi_path %>
