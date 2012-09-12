@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
 
-gem 'sqlite3'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -10,8 +9,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 group :development do
   gem 'faker'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 group :test do
