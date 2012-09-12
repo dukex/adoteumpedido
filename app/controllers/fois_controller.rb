@@ -9,7 +9,7 @@ class FoisController < ApplicationController
   end
 
   def show
-    @foi = Foi.where(approve: true).find(params[:id])
+    @foi = Foi.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
