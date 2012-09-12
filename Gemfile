@@ -16,4 +16,3 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
-gem 'activeadmin'
