@@ -1,17 +1,25 @@
 <%= link_to 'New Foi', new_foi_path, id:"new_foi" %>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+<div id="welcome">
+  <p> (Texto de apresentação) Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat.</p>
+  <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+</div>
 
-<ul>
+<h2> Pedidos Orfãos </h2>
+<ol id="fois">
   <% @fois.each do |foi| %>
-    <li>
+    <li class="foi">
+      <%= simple_format foi.resume %>
+      <ul>
+        <li> <%= link_to "(33) comentatios", foi %> </li>
+        <li> <%= link_to "(3) requisições no queremos saber", foi %> </li>
+      </ul>
       <%= link_to foi do %>
-        <%= foi.resume %>
-        <% end %>
+      <% end %>
     </li>
   <% end %>
-</ul>
+</ol>
