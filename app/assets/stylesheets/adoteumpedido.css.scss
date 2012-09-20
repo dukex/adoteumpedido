@@ -1,0 +1,76 @@
+@import "compass";
+@import "compass/reset";
+@import "bourbon/bourbon";
+@import "settings";
+@import "neat";
+
+$color_main: #E1F1F7;
+$color_secondary: #D3EAF2;
+$color_white: #F7F7F7;
+$color_black: #333;
+
+
+a{
+  color: $color_black;
+  &:hover, &:visited{
+    color: $color_black;
+  }
+}
+
+body{
+  background-color: $color_white;
+  font: normal 12px/15px $helvetica;
+  font-size:  modular-scale(12px, 0, 1.618);
+  line-height: modular-scale(12px, 1, 1.618);
+  > div{
+    @include outer-container;
+  }
+}
+
+header{
+  border-bottom: 2px solid $color_main;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  @include clearfix;
+
+  nav{
+    margin-bottom: 10px;
+    @include span-columns(7);
+    li{
+      float: left;
+      a{
+        color: $color_secondary;
+        font-family: $helvetica;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        display: block;
+        &.active{
+          text-decoration: none;
+          color: #888;
+        }
+      }
+      + li{
+        margin-left: 30px;
+
+      }
+    }
+  }
+  h1{
+    @include span-columns(3);
+    @include omega;
+    margin-bottom: 10px;
+    float: right;
+    font-size:  modular-scale(14px, 1, 1.618);
+    font-weight: 700;
+    line-height: modular-scale(14px, 1, 1.618);
+    text-align: right;
+    > a{
+      text-decoration: none
+    }
+  }
+
+  #new_foi{
+    @include button;
+  }
+}
