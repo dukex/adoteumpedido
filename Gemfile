@@ -17,11 +17,15 @@ group :production do
 end
 
 group :development do
-  gem 'faker'
+  gem 'ffaker'
+  gem 'rb-fsevent', '~> 0.9.1'
+  gem 'guard-livereload'
+  gem 'rack-livereload'
 end
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 group :test do
