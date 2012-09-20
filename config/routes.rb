@@ -5,4 +5,6 @@ AdoteSeuPedido::Application.routes.draw do
   resources :fois, only: [:index, :show, :new, :create] do
     resources :comments, only: [:create]
   end
+
+  root to: "fois#index"
 end
