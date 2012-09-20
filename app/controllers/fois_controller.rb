@@ -1,7 +1,6 @@
 class FoisController < ApplicationController
   def index
     @fois = Foi.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @fois }
