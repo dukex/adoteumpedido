@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AdoteSeuPedido</title>
+  <title>Adote Seu Pedido</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div>
+    <header>
+      <h1> <%= link_to t(:name, scope: [:application]), root_path  %> </h1>
+      <nav>
+        <ul>
+          <li> <%= link_to t(:home, scope: [:application, :navigation]), root_path, :class => 'active'  %> </li>
+          <li> <%= link_to t(:how_to, scope: [:application, :navigation]), root_path  %> </li>
+        </ul>
+      </nav>
+    </header>
+    <div>
+      <%= yield %>
+    </div>
+  </div>
+  <footer>
+  </footer>
 </body>
 </html>
