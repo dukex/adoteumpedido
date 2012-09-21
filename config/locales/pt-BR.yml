@@ -1,3 +1,14 @@
 "pt-BR":
   application:
     name: "Adote um Pedido"
+    navigation:
+      home: Inicio
+      how_to: Como Funciona?
+      my_account: Minha Conta
+
+  foi:
+    action:
+      new_foi: "Faz um pedido anonimo"
+  titles:
+    foi:
+      adopt: "Adote um pedido"
