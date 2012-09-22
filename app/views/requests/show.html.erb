@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p> <%= @request.resume %> </p>
+
+<div id="description"
+  <%= simple_format @request.description %>
+</div>
+
+<%= link_to 'Adotar' %>
+
+<section id="comments">
+  <h2> Comentarios </h2>
+  <ul>
+    <% @request.comments.each do |comment| %>
+      <li>
+        <%= raw simple_format(comment.body) %>
+        <%= time_tag comment.created_at, comment.created_at  %>
+      </li>
+    <% end %>
+  </ul>
+  <%= semantic_form_for [@request, Comment.new] do |f| %>
+    <%= f.inputs :body %>
+    <%= f.actions %>
+  <% end %>
+</section>

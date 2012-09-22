@@ -1,16 +1,9 @@
 class CommentsController < ApplicationController
-  # POST /comments
-  # POST /comments.json
-  def create
-    @comment = Comment.new(params[:comment])
-    @comment.update_attribute :foi_id, params[:foi_id]
+  respond_to :html
 
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @comment.foi, notice: 'Comment was successfully created.' }
-      else
-        format.html { redirect_to @comment.foi, notice: 'Comment wasnt created' }
-      end
-    end
+  def create
+    @comment = Comment.create(params[:comment])
+    @comment.update_attribute :request_id, params[:request_id]
+    respond_with @comment, location: @comment.request
   end
 end

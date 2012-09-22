@@ -2,9 +2,9 @@ AdoteSeuPedido::Application.routes.draw do
 
   devise_for :users
 
-  resources :fois, only: [:index, :show, :new, :create] do
-    resources :comments, only: [:create]
+  resources :requests, only: [:index, :show, :new, :create] do
+    resource :comments, only: [:create]
   end
 
-  root to: "fois#index"
+  root to: "requests#index"
 end
