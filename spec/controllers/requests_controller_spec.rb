@@ -5,7 +5,7 @@ describe RequestsController do
     it "should assigns requests" do
       requests = 5.times.map{ create :request }
       get :index
-      assigns(:requests).should == requests
+      assigns(:requests).should == requests.reverse
     end
   end
 

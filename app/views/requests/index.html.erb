@@ -1,31 +1,30 @@
 <div id="welcome">
   <h2>Como assim "adote" um pedido?</h2>
 
-  <div>
-    <p>Se você deseja encaminhar um pedido de informação a um órgão público, mas não pode ou não quer identificar-se ao fazê-lo (por motivos de segurança ou necessidade de preservação de fontes), o Adote um Pedido permite que você apresente sua ideia a outras pessoas de maneira totalmente sigilosa.</p>
-    <p>Os pedidos colocados para "adoção" ficarão disponíveis em uma lista aberta para que possam ser "adotados" por qualquer cidadã(o). A ideia é proteger o(a) autor(a) do pedido e, ao mesmo tempo, viabilizar o encaminhamento de pedidos de informação de interesse público. Além disso, no Adote um Pedido, o "doador" tem a possibilidade de explicar porque o respectivo pedido é interessante, revelador, etc., e qualquer pessoa pode comentá-lo, criticá-lo, enriquecê-lo, melhorar sua redação, etc.</p>
-  </div>
-  <%= image_tag 'top_secret.png' %>
+
+  <p>Se você deseja encaminhar um pedido de informação a um órgão público, mas não pode ou não quer identificar-se ao fazê-lo (por motivos de segurança ou necessidade de preservação de fontes), o Adote um Pedido permite que você apresente sua ideia a outras pessoas de maneira totalmente sigilosa.</p>
+  <p>Os pedidos colocados para "adoção" ficarão disponíveis em uma lista aberta para que possam ser "adotados" por qualquer cidadã(o). A ideia é proteger o(a) autor(a) do pedido e, ao mesmo tempo, viabilizar o encaminhamento de pedidos de informação de interesse público. Além disso, no Adote um Pedido, o "doador" tem a possibilidade de explicar porque o respectivo pedido é interessante, revelador, etc., e qualquer pessoa pode comentá-lo, criticá-lo, enriquecê-lo, melhorar sua redação, etc.</p>
 </div>
 
-<%= link_to t(:new, scope: [:request, :action]), new_request_path, id:"new_request"   %>
-
-<section id="fois_orphans">
+<div id="new_request">
+  <%= link_to t(:new, scope: [:request, :action]), new_request_path   %>
+</div>
+<section id="orphans_requests">
   <h2> <%= t(:adopt, scope: [:titles, :request]) %> </h2>
-  <table class="table table-striped" id="requests">
-    <tbody>
-      <% @requests.each do |request| %>
-      <tr>
-        <td> #<%= request.id %></td>
-        <td>
-          <%= simple_format request.resume %>
-        </td>
-        <td>
-          <%= link_to "(33) comentatios", request %>
-          <%= link_to "(3) requisições no queremos saber", request %>
-        </td>
-      </tr>
-      <% end %>
-    </tbody>
-  </table>
+
+  <ul id="requests">
+    <% @requests.each do |request| %>
+      <li class="request">
+        <%= link_to request do %>
+          <%= time_tag request.created_at, request.created_at.to_s(:short) %>
+          <h3><%= request.resume %></h3>
+          <blockquote> <%= request.description[0..100] %>... </blockquote>
+          <ul class="info">
+            <li><%= pluralize(request.comments.count.to_i, 'comentátio', 'comentátios', 'nenhum comentário') %></li>
+            <li><%= pluralize(request.adopts.count.to_i, 'adoção', 'adoções', 'nenhuma adoção') %></li>
+          </ul>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 </section>

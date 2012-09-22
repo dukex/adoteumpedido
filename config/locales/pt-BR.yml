@@ -8,7 +8,7 @@
 
   request:
     action:
-      new: "Faz um pedido anonimo"
+      new: "Colocar pedido para adoção"
 
   formtastic:
     hints:
