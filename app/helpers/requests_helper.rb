@@ -1,6 +1,10 @@
-module ResquestsHelper
+module RequestsHelper
+  include ActionView::Helpers::TextHelper
+
+  alias_method :old_pluralize, :pluralize
+
   def pluralize(count, singular, plural = nil, zero = nil)
     return zero if count == 0
-    "#{count || 0} " + ((count == 1) ? singular : (plural || singular.pluralize))
+    old_pluralize count, singular, plural
   end
 end
