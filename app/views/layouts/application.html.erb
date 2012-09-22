@@ -12,7 +12,7 @@
       <h1> <%= link_to t(:name, scope: [:application]), root_path  %> </h1>
       <nav>
         <ul>
-          <li> <%= link_to t(:home, scope: [:application, :navigation]), root_path, :class => 'active'  %> </li>
+          <li> <%= link_to t(:request, scope: [:application, :navigation]), requests_path, :class => 'active'  %> </li>
           <li> <%= link_to t(:how_to, scope: [:application, :navigation]), root_path  %> </li>
           <li> <%= link_to t(:my_account, scope: [:application, :navigation]), root_path  %> </li>
         </ul>
