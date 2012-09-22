@@ -3,7 +3,7 @@
 @import "bourbon/bourbon";
 @import "bootstrap";
 @import "semantic_bootstrap/grid";
-@import "semantic_bootstrap/typography";
+@import "semantic_bootstrap/base";
 
 $color_main: #69D2E7;
 $color_main_v: #A7DBD8;
@@ -102,8 +102,7 @@ header{
 #new_request{
   text-align: center;
   a{
-    @extend .btn;
-    @extend .btn-success;
+    @include button(success);
     padding: 20px 20px;
     font-size: 20px;
   }

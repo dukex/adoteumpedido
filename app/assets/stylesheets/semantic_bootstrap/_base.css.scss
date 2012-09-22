@@ -1,0 +1,13 @@
+// Typography
+
+@mixin lead{
+  @extend .lead
+}
+
+@mixin button($type: false){
+  @extend .btn;
+  @if(type){
+    @extend .btn-#{$type}
+  }
+}
+
