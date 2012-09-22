@@ -6,22 +6,22 @@
       how_to: Como Funciona?
       my_account: Minha Conta
 
-  foi:
+  request:
     action:
-      new_foi: "Faz um pedido anonimo"
+      new: "Faz um pedido anonimo"
 
   formtastic:
     hints:
-      foi:
+      request:
         resume: Texto para dica do resumo
         description: Texto para dica da descrição
         observation: Texto para dica da observação
     labels:
-      foi:
+      request:
         resume: "Resumo"
         description: "Descrição"
         observation: "Obs"
 
   titles:
-    foi:
+    request:
       adopt: "Adote um pedido"
