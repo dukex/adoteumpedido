@@ -9,6 +9,19 @@
   foi:
     action:
       new_foi: "Faz um pedido anonimo"
+
+  formtastic:
+    hints:
+      foi:
+        resume: Texto para dica do resumo
+        description: Texto para dica da descrição
+        observation: Texto para dica da observação
+    labels:
+      foi:
+        resume: "Resumo"
+        description: "Descrição"
+        observation: "Obs"
+
   titles:
     foi:
       adopt: "Adote um pedido"
