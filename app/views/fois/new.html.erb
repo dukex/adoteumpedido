@@ -1,5 +1,10 @@
-<h1>New foi</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', fois_path %>
+<div id="new_foi_container">
+<%= semantic_form_for @foi do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :resume %>
+    <%= f.input :description %>
+    <%= f.input :observation, input_html: {rows: "5"} %>
+  <% end %>
+  <button type="submit" class="btn">Submit</button>
+<% end %>
+</div>
