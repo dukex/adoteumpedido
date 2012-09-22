@@ -6,7 +6,7 @@
   <%= simple_format @request.description %>
 </div>
 
-<%= link_to 'Adotar' %>
+<%= link_to 'Adotar', new_request_adopt_path(@request) %>
 
 <section id="comments">
   <h2> Comentarios </h2>
