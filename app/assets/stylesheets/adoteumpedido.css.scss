@@ -99,7 +99,7 @@ header{
   }
 }
 
-#new_request{
+#new_request_link{
   text-align: center;
   a{
     @include button(success);
@@ -160,5 +160,23 @@ header{
     display: block;
     font-size: 12px;
     font-style: italic;
+  }
+}
+
+form{
+  @include row(true);
+
+  li{
+    @include clearfix;
+  }
+  textarea, input{
+    @include columns(7, true);
+    float: left;
+  }
+  .inline-hints{
+    @include columns(5);
+  }
+  label{
+    font-weight: 700;
   }
 }

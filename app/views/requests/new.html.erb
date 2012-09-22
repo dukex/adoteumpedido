@@ -5,6 +5,8 @@
     <%= f.input :description %>
     <%= f.input :observation, input_html: {rows: "5"} %>
   <% end %>
-  <button type="submit" class="btn">Submit</button>
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :button %>
+  <% end %>
 <% end %>
 </div>
