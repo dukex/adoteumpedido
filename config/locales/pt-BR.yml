@@ -1,8 +1,11 @@
 "pt-BR":
+  adopt:
+    action:
+      new: "Adotar esse pedido"
   application:
     name: "Adote um Pedido"
     navigation:
-      home: Inicio
+      request: Pedidos
       how_to: Como Funciona?
       my_account: Minha Conta
 
@@ -10,7 +13,11 @@
     action:
       new: "Colocar pedido para adoção"
 
+
   formtastic:
+    actions:
+      comment:
+        create: "Comentar"
     hints:
       request:
         resume: Texto para dica do resumo
@@ -21,7 +28,10 @@
         resume: "Resumo"
         description: "Descrição"
         observation: "Obs"
+      comment:
+        body: "Comentário"
 
   titles:
     request:
       adopt: "Adote um pedido"
+      comments: "Comentários"

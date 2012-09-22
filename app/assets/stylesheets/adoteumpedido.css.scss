@@ -21,6 +21,10 @@ a{
   }
 }
 
+button{
+  @include button(success);
+}
+
 body{
   background-color: $color_white;
   > div{
@@ -29,6 +33,14 @@ body{
   ul, ol{
     margin-left: 0;
   }
+}
+
+time{
+  clear: both;
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  color: $color_main;
 }
 
 header{
@@ -99,7 +111,7 @@ header{
   }
 }
 
-#new_request_link{
+#new_request_link, #new_adopt_link{
   text-align: center;
   a{
     @include button(success);
@@ -155,12 +167,6 @@ header{
       font-weight: 700;
     }
   }
-  time{
-    clear: both;
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-  }
 }
 
 form{
@@ -178,5 +184,55 @@ form{
   }
   label{
     font-weight: 700;
+  }
+  .actions{
+    @include columns(7, true);
+    button{
+      float: right;
+      margin: 0 15px 0 0;
+    }
+  }
+}
+
+#request{
+  @include columns(8, true);
+  #description{
+    padding: 10px;
+    background-color: #FFF;
+  }
+  textarea{
+    width: 100%;
+  }
+  .actions{
+    width: auto;
+    float: right;
+    button{
+      margin: 0;
+    }
+  }
+  #comments{
+    margin-top: 40px;
+
+    li{
+      padding: 10px 5px;
+      border-bottom: 1px solid #FFF;
+      + li {
+        border-top: 1px solid #E6E6E6;
+      }
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+    time{
+      margin-bottom: 5px;
+    }
+  }
+}
+
+#request_aside{
+  @include columns(4, true);
+  float: right;
+  #new_adopt_link a{
+    width: 90%;
   }
 }

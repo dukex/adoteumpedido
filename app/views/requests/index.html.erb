@@ -9,9 +9,9 @@
 <div id="new_request_link">
   <%= link_to t(:new, scope: [:request, :action]), new_request_path   %>
 </div>
+
 <section id="orphans_requests">
   <h2> <%= t(:adopt, scope: [:titles, :request]) %> </h2>
-
   <ul id="requests">
     <% @requests.each do |request| %>
       <li class="request">
