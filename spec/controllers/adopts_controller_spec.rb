@@ -37,7 +37,7 @@ describe AdoptsController do
 
     it "should redirect to adopt path" do
       post :create, adopt: {description: "Ola Mundo"}, request_id: request.id
-      response.should redirect_to(request_adopt_path(Adopt.last))
+      response.should redirect_to(request_adopt_path(request, Adopt.last))
     end
 
     context "with a user" do

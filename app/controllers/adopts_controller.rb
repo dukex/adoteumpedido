@@ -16,7 +16,7 @@ class AdoptsController < ApplicationController
     @adopt = Adopt.new(params[:adopt])
     @adopt.save
     @adopt.update_attributes request_id: params[:request_id], user_id: user_id
-    respond_with @adopt, location: request_adopt_path(@adopt.request)
+    respond_with @adopt, location: request_adopt_path(@adopt.request, @adopt)
   end
 
   private
