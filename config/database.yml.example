@@ -1,0 +1,13 @@
+defaults: &DEFAULTS
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+
+development:
+  <<: *DEFAULTS
+  database: adoteumpedido_dev
+
+test:
+  <<: *DEFAULTS
+  database: adoteumpedido_test
