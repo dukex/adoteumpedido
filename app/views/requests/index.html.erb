@@ -20,7 +20,7 @@
           <h3><%= request.resume %></h3>
           <blockquote> <%= request.description[0..100] %>... </blockquote>
           <ul class="info">
-            <li><%= pluralize(request.comments.count.to_i, 'comentátio', 'comentátios', 'nenhum comentário') %></li>
+            <li><%= pluralize(request.comments.count.to_i, 'comentário', 'comentários', 'nenhum comentário') %></li>
             <li><%= pluralize(request.adopts.count.to_i, 'adoção', 'adoções', 'nenhuma adoção') %></li>
           </ul>
         <% end %>
