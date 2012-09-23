@@ -1,6 +1,6 @@
 class AdoptsController < ApplicationController
   respond_to :json, :html
-  before_filter :assign_request, only: [:new, :create]
+  before_filter :assign_request
   before_filter :assign_user, only: [:create]
 
   def show
