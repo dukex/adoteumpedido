@@ -36,3 +36,4 @@
     request:
       adopt: "Adote um pedido"
       comments: "Comentários"
+      observation: "Comentário do doador:"
