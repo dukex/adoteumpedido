@@ -199,6 +199,19 @@ form{
   #description{
     padding: 10px;
     background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #EEE;
+    margin-bottom: 20px;
+  }
+  h4{
+    margin: 0 0 5px 0;
+  }
+  #observation{
+    @extend blockquote;
+    border-color: $color_secondary;
+    padding: 15px;
+    background-color: #FFF;
+    margin-bottom: 20px;
   }
   textarea{
     width: 100%;
@@ -209,6 +222,9 @@ form{
     button{
       margin: 0;
     }
+  }
+  time{
+    color: $color_main_to_link;
   }
   #comments{
     margin-top: 40px;

@@ -5,7 +5,14 @@
   <div id="description">
     <%= simple_format @request.description %>
   </div>
-  <%= time_tag @request.created_at, @request.created_at.to_s(:short) %>
+
+  <h5> <%= t(:observation, scope: [:titles, :request]) %> </h5>
+  <% unless @request.observation.blank? %>
+    <div id="observation">
+      <%= simple_format @request.observation %>
+    </div>
+  <% end %>
+  <%= time_tag @request.created_at, t(:created_at, scope: [:request], date: @request.created_at.to_s(:short)) %>
   <section id="comments">
     <h2> <%= t(:comments, scope: [:titles, :request]) %> </h2>
     <ul>
