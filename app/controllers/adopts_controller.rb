@@ -1,5 +1,7 @@
 class AdoptsController < ApplicationController
   respond_to :html
+  before_filter :assign_request, only: [:new, :create]
+  before_filter :assign_user, only: [:create]
 
   def show
     @adopt = Adopt.find(params[:id])
@@ -7,20 +9,22 @@ class AdoptsController < ApplicationController
   end
 
   def new
-    @request = Request.find(params[:request_id])
     @adopt = Adopt.new description: @request.description, resume: @request.resume
     respond_with @adopt
   end
 
   def create
-    @adopt = Adopt.new(params[:adopt])
-    @request = Request.find(params[:request_id])
-    @adopt.update_attributes request_id: @request.id, user_id: user_id
+    @adopt = Adopt.create params[:adopt]
     respond_with @request, @adopt
   end
 
   private
-  def user_id
-    current_user && current_user.id
-  end
+    def assign_user
+      params[:adopt][:user_id] = current_user.id if current_user && current_user.id
+    end
+
+    def assign_request
+      @request = Request.find(params[:request_id])
+      params[:adopt][:request_id] = params[:request_id] if params[:adopt]
+    end
 end
