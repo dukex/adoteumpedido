@@ -241,6 +241,7 @@ form{
     }
     time{
       margin-bottom: 5px;
+      color: $color_main;
     }
   }
 }
@@ -250,5 +251,14 @@ form{
   float: right;
   #new_adopt_link a{
     width: 90%;
+  }
+  #adopts{
+    li{
+      padding: 0 5px 10px 5px;
+      + li {
+        border-top: 1px solid #EEE;
+        padding-top: 10px;
+      }
+    }
   }
 }

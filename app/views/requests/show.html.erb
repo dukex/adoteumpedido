@@ -38,4 +38,19 @@
   <div id="new_adopt_link">
     <%= link_to t(:new, scope: [:adopt, :action]), new_request_adopt_path(@request) %>
   </div>
+  <% unless @request.adopts.blank? %>
+    <div id="adopts">
+      <h3> Adoções </h3>
+      <ul>
+        <% @request.adopts.each do |adopt| %>
+          <li>
+            <%= link_to request_adopt_path(@request, adopt) do %>
+              <h5><%= adopt.resume %></h5>
+              <%= time_tag adopt.created_at, t(:created_at, scope: [:adopt], date:  adopt.created_at.to_s(:short)) %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 </aside>

@@ -2,6 +2,7 @@
   adopt:
     action:
       new: "Adotar esse pedido"
+    created_at: "Adota em %{date}"
   application:
     name: "Adote um Pedido"
     navigation:
