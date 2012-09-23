@@ -1,14 +1,17 @@
 class CommentsController < ApplicationController
   respond_to :html
+  before_filter :assign_request, only: [:create]
 
   def create
-    @request = Request.find(params[:request_id])
-    @comment = Comment.new(params[:comment])
-    if @comment.save
-      @comment.update_attribute :request_id, @request.id
-    end
+    @comment = Comment.create(params[:comment])
     respond_with(@comment) do |format|
       format.html { redirect_to @request }
     end
   end
+
+  private
+    def assign_request
+      @request = Request.find(params[:request_id])
+      params[:comment][:request_id] = params[:request_id]
+    end
 end
