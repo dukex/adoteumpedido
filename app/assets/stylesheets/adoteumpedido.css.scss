@@ -4,6 +4,7 @@
 @import "bootstrap";
 @import "semantic_bootstrap/grid";
 @import "semantic_bootstrap/base";
+@import "semantic_bootstrap/components";
 
 $color_main: #69D2E7;
 $color_main_v: #A7DBD8;
@@ -41,6 +42,10 @@ time{
   font-size: 12px;
   font-style: italic;
   color: $color_main;
+}
+
+#notice{
+  @include alert;
 }
 
 header{
