@@ -8,6 +8,6 @@ class Adopt < ActiveRecord::Base
 
 
   def diff
-    Diffy::Diff.new(description, request.description).to_s(:html_simple)
+    Diffy::Diff.new(request.description, description).to_s(:html_simple)
   end
 end
