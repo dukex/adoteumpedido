@@ -1,7 +1,6 @@
 <div id="welcome">
   <h2>Como assim "adote" um pedido?</h2>
 
-
   <p>Se você deseja encaminhar um pedido de informação a um órgão público, mas não pode ou não quer identificar-se ao fazê-lo (por motivos de segurança ou necessidade de preservação de fontes), o Adote um Pedido permite que você apresente sua ideia a outras pessoas de maneira totalmente sigilosa.</p>
   <p>Os pedidos colocados para "adoção" ficarão disponíveis em uma lista aberta para que possam ser "adotados" por qualquer cidadã(o). A ideia é proteger o(a) autor(a) do pedido e, ao mesmo tempo, viabilizar o encaminhamento de pedidos de informação de interesse público. Além disso, no Adote um Pedido, o "doador" tem a possibilidade de explicar porque o respectivo pedido é interessante, revelador, etc., e qualquer pessoa pode comentá-lo, criticá-lo, enriquecê-lo, melhorar sua redação, etc.</p>
 </div>
@@ -20,8 +19,8 @@
           <h3><%= request.resume %></h3>
           <blockquote> <%= request.description[0..100] %>... </blockquote>
           <ul class="info">
-            <li><%= pluralize(request.comments.count.to_i, 'comentário', 'comentários', 'nenhum comentário') %></li>
-            <li><%= pluralize(request.adopts.count.to_i, 'adoção', 'adoções', 'nenhuma adoção') %></li>
+            <li><%= count(request.comments) %></li>
+            <li><%= count(request.adopts) %></li>
           </ul>
         <% end %>
       </li>

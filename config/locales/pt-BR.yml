@@ -27,6 +27,15 @@
         observation: "Comentário"
       comment:
         body: "Comentário"
+  pluralize:
+    adopts:
+      adopt: 'adoção'
+      adopts: 'adoções'
+      noadopts: 'nenhuma adoção'
+    comments:
+      comment: 'comentário'
+      comments: 'comentários'
+      nocomments: 'nenhum comentário'
   request:
     action:
       new: "Colocar pedido para adoção"
