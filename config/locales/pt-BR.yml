@@ -8,6 +8,8 @@
     action:
       new: "Adotar esse pedido"
     created_at: "Adota em %{date}"
+    headline: Adoção do pedido %{link}
+
   application:
     name: "Adote um Pedido"
     navigation:
@@ -52,6 +54,7 @@
     adopt:
       show: "Adoções"
       comments: "Comentarios no pedido"
+      compare: "Comparando adoção com o pedido"
       create: "Adotando Pedido"
     request:
       adopt: "Adote um pedido"

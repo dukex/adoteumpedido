@@ -48,6 +48,10 @@ time{
   @include alert;
 }
 
+.adopt_headline{
+  @include alert(success)
+}
+
 header{
   @include row(true);
   border-bottom: 2px solid $color_main;
@@ -197,7 +201,7 @@ form{
   }
 }
 
-#new_adopt_container, #request{
+#new_adopt_container, #request, #adopt{
   @include columns(8, true);
   .actions{
     width: auto;
@@ -218,8 +222,8 @@ form{
   }
 }
 
-#request{
-  #description{
+#request, #adopt{
+  #description, #diff{
     padding: 10px;
     background-color: #FFF;
     border-radius: 5px;
@@ -273,5 +277,17 @@ aside{
 #request_aside{
   #new_adopt_link a{
     width: 90%;
+  }
+}
+
+#diff{
+  li{
+    @extend .p
+  }
+  del{
+    color: #FF0033;
+  }
+  ins{
+    color: #00a37a;
   }
 }

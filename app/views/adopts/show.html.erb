@@ -1,16 +1,34 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
-<p>
-  <b>Request:</b>
-  <%= @adopt.request_id %>
-</p>
 
-<p>
-  <b>Resume:</b>
-  <%= @adopt.resume %>
-</p>
+<h4 class="adopt_headline"> <%= raw t(:headline, scope: [:adopt], link: link_to(@request.resume, @request)) %> </h4>
+<h2> <%= @adopt.resume %> </h2>
+<section id="adopt">
+  <div id="description">
+    <%= simple_format @adopt.description %>
+  </div>
+  <%= time_tag @adopt.created_at, t(:created_at, scope: [:adopt], date: @adopt.created_at.to_s(:short)) %>
 
-<p>
-  <b>Description:</b>
-  <%= @adopt.description %>
-</p>
+  <h3> <%= t(:compare, scope: [:titles, :adopt]) %> </h3>
+  <div id="diff">
+    <%= raw @adopt.diff %>
+  </div>
+</section>
+
+<aside id="adopt_aside">
+  <% unless @request.comments.blank? %>
+    <div id="comments">
+      <h3> <%= t(:comments, scope: [:titles, :adopt]) %> </h3>
+      <ul>
+        <% @request.comments.each do |comment| %>
+          <li>
+            <%= raw simple_format(comment.body) %>
+            <%= time_tag comment.created_at,  t(:created_at, scope: [:comment], date:  comment.created_at.to_s(:short)) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</aside>
