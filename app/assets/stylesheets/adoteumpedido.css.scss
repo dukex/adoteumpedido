@@ -197,8 +197,28 @@ form{
   }
 }
 
-#request{
+#new_adopt_container, #request{
   @include columns(8, true);
+  .actions{
+    width: auto;
+    float: right;
+    button{
+      margin: 0;
+    }
+  }
+  textarea, input{
+    width: 100%;
+  }
+  #observation{
+    @extend blockquote;
+    border-color: $color_secondary;
+    padding: 15px;
+    background-color: #FFF;
+    margin-bottom: 20px;
+  }
+}
+
+#request{
   #description{
     padding: 10px;
     background-color: #FFF;
@@ -209,23 +229,7 @@ form{
   h4{
     margin: 0 0 5px 0;
   }
-  #observation{
-    @extend blockquote;
-    border-color: $color_secondary;
-    padding: 15px;
-    background-color: #FFF;
-    margin-bottom: 20px;
-  }
-  textarea{
-    width: 100%;
-  }
-  .actions{
-    width: auto;
-    float: right;
-    button{
-      margin: 0;
-    }
-  }
+
   time{
     color: $color_main_to_link;
   }
@@ -249,13 +253,13 @@ form{
   }
 }
 
-#request_aside{
+aside{
   @include columns(4, true);
   float: right;
-  #new_adopt_link a{
-    width: 90%;
-  }
-  #adopts{
+  #adopts, #comments{
+    h3{
+      margin-top: 0;
+    }
     li{
       padding: 0 5px 10px 5px;
       + li {
@@ -263,5 +267,11 @@ form{
         padding-top: 10px;
       }
     }
+  }
+}
+
+#request_aside{
+  #new_adopt_link a{
+    width: 90%;
   }
 }

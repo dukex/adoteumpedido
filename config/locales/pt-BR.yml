@@ -18,6 +18,8 @@
     created_at: "Comentado em %{date}"
   formtastic:
     actions:
+      adopt:
+        create: "Adotar!"
       comment:
         create: "Comentar"
       request:
@@ -28,12 +30,10 @@
         description: Texto para dica da descrição
         observation: Texto para dica da observação
     labels:
-      request:
-        resume: "Resumo"
-        description: "Descrição"
-        observation: "Comentário"
-      comment:
-        body: "Comentário"
+      resume: "Resumo"
+      description: "Descrição"
+      observation: "Comentário"
+      body: "Comentário"
   pluralize:
     adopts:
       adopt: 'adoção'
@@ -51,6 +51,8 @@
   titles:
     adopt:
       show: "Adoções"
+      comments: "Comentarios no pedido"
+      create: "Adotando Pedido"
     request:
       adopt: "Adote um pedido"
       comments: "Comentários"
