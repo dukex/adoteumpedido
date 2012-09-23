@@ -53,7 +53,7 @@
   titles:
     adopt:
       show: "Adoções"
-      comments: "Comentarios no pedido"
+      comments: "Comentarios do pedido"
       compare: "Comparando adoção com o pedido"
       create: "Adotando Pedido"
     request:
