@@ -24,7 +24,7 @@
       request:
         resume: "Resumo"
         description: "Descrição"
-        observation: "Obs"
+        observation: "Comentário"
       comment:
         body: "Comentário"
   request:
