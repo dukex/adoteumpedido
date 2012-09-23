@@ -4,8 +4,9 @@ class CommentsController < ApplicationController
   def create
     @request = Request.find(params[:request_id])
     @comment = Comment.new(params[:comment])
-    @comment.save
-    @comment.update_attribute :request_id, @request.id
+    if @comment.save
+      @comment.update_attribute :request_id, @request.id
+    end
     respond_with(@comment) do |format|
       format.html { redirect_to @request }
     end
