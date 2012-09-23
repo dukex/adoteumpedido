@@ -156,13 +156,29 @@ form{
 
   li{
     @include clearfix;
+    position: relative;
+    &.error{
+      input, textarea{
+        border-color: #F00;
+        &:focus{
+          border-color: rgba(255, 50, 50, 0.8);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 50, 50, 0.6);
+        }
+      }
+
+    }
   }
   textarea, input{
     @include columns(7, true);
     float: left;
+    left: 10px;
   }
   .inline-hints{
     @include columns(5);
+    float: right;
+  }
+  .inline-errors{
+    display: none;
   }
   label{
     font-weight: 700;
