@@ -40,6 +40,11 @@ describe AdoptsController do
       response.should redirect_to(request_adopt_path(request, Adopt.last))
     end
 
+    it "should render new with a invalid adopt" do
+      post :create, adopt: {description: nil}, request_id: request.id
+      response.should render_template(:new)
+    end
+
     context "with a user" do
       let(:user){ create(:user) }
 
@@ -48,7 +53,7 @@ describe AdoptsController do
       end
 
       it "should create to current user" do
-        post :create, adopt: {description: "Ola Mundo"}, request_id: request.id
+        post :create, adopt: {description: "Ola Mundo", resume: "Ola"}, request_id: request.id
         Adopt.last.user.should == user
       end
     end
