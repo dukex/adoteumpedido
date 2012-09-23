@@ -93,24 +93,6 @@ header{
   }
 }
 
-#new_foi_container{
-  @include row(true);
-
-  li{
-    @include clearfix;
-  }
-  textarea, input{
-    @include columns(7, true);
-    float: left;
-  }
-  .inline-hints{
-    @include columns(5);
-  }
-  label{
-    font-weight: 700;
-  }
-}
-
 #new_request_link, #new_adopt_link{
   text-align: center;
   a{
