@@ -12,10 +12,6 @@ group :assets do
   gem 'neat'
 end
 
-group :production do
-  gem 'pg'
-end
-
 group :development do
   gem 'ffaker'
   gem 'rb-fsevent', '~> 0.9.1'
@@ -40,3 +36,4 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'formtastic'
+gem 'pg'
