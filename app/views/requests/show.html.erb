@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <h2> <%= @request.resume %> </h2>
 <section id="request">
@@ -39,7 +41,7 @@
   </div>
   <% unless @request.adopts.blank? %>
     <div id="adopts">
-      <h3> Adoções </h3>
+      <h3> <%= t(:show, scope: [:titles, :adopt]) %> </h3>
       <ul>
         <% @request.adopts.each do |adopt| %>
           <li>

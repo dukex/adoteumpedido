@@ -1,12 +1,13 @@
 <div id="new_request_container">
-<%= semantic_form_for @request do |f| %>
-  <%= f.inputs do %>
-    <%= f.input :resume %>
-    <%= f.input :description %>
-    <%= f.input :observation, input_html: {rows: "5"} %>
+  <h2> <%= t(:create, scope: [:titles, :request]) %> </h2>
+  <%= semantic_form_for @request do |f| %>
+    <%= f.inputs do %>
+      <%= f.input :resume %>
+      <%= f.input :description %>
+      <%= f.input :observation, input_html: {rows: "5"} %>
+    <% end %>
+    <%= f.actions do %>
+      <%= f.action :submit, :as => :button %>
+    <% end %>
   <% end %>
-  <%= f.actions do %>
-    <%= f.action :submit, :as => :button %>
-  <% end %>
-<% end %>
 </div>

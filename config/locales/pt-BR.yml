@@ -1,4 +1,9 @@
 "pt-BR":
+  activerecord:
+    models:
+      request: Pedido
+      comment: Comentário
+      adopt: Adoção
   adopt:
     action:
       new: "Adotar esse pedido"
@@ -15,6 +20,8 @@
     actions:
       comment:
         create: "Comentar"
+      request:
+        create: "Criar Pedido"
     hints:
       request:
         resume: Texto para dica do resumo
@@ -42,7 +49,10 @@
     created_at: "Doado em %{date}"
 
   titles:
+    adopt:
+      show: "Adoções"
     request:
       adopt: "Adote um pedido"
       comments: "Comentários"
+      create: "Pedido para Adoção"
       observation: "Comentário do doador:"
