@@ -18,8 +18,8 @@
     <ul>
       <% @request.comments.each do |comment| %>
         <li>
-          <%= time_tag comment.created_at, comment.created_at.to_s(:short)  %>
           <%= raw simple_format(comment.body) %>
+          <%= time_tag comment.created_at,  t(:created_at, scope: [:comment], date:  comment.created_at.to_s(:short)) %>
         </li>
       <% end %>
     </ul>

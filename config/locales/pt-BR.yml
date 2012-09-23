@@ -8,12 +8,8 @@
       request: Pedidos
       how_to: Como Funciona?
       my_account: Minha Conta
-
-  request:
-    action:
-      new: "Colocar pedido para adoção"
-
-
+  comment:
+    created_at: "Comentado em %{date}"
   formtastic:
     actions:
       comment:
@@ -30,6 +26,10 @@
         observation: "Obs"
       comment:
         body: "Comentário"
+  request:
+    action:
+      new: "Colocar pedido para adoção"
+    created_at: "Doado em %{date}"
 
   titles:
     request:
