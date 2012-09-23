@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :adopt do
-
+    resume "String"
+    description "String"
   end
 end

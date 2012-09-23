@@ -31,12 +31,12 @@ describe AdoptsController do
 
   describe "POST create" do
     it "should create a adopt with params" do
-      post :create, request_id: request.id, adopt: {description: "Ola Mundo"}
+      post :create, request_id: request.id, adopt: {description: "Ola Mundo", resume: "Ola"}
       Adopt.last.description.should == "Ola Mundo"
     end
 
     it "should redirect to adopt path" do
-      post :create, adopt: {description: "Ola Mundo"}, request_id: request.id
+      post :create, adopt: {description: "Ola Mundo", resume: "Ola"}, request_id: request.id
       response.should redirect_to(request_adopt_path(request, Adopt.last))
     end
 
