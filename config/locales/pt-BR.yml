@@ -7,7 +7,7 @@
   adopt:
     action:
       new: "Adotar esse pedido"
-    created_at: "Adota em %{date}"
+    created_at: "Adotado em %{date}"
     headline: Adoção do pedido %{link}
 
   application:
