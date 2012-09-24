@@ -6,5 +6,5 @@ AdoteSeuPedido::Application.routes.draw do
     resources :adopts, only: [:new, :show, :create]
   end
 
-  root to: "requests#index"
+  root to: "application#index"
 end

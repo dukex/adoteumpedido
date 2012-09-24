@@ -47,7 +47,9 @@
       nocomments: 'nenhum comentário'
   request:
     action:
+      how_to: "Entenda como funciona"
       new: "Colocar pedido para adoção"
+      show: "Conhecer pedidos doados"
     created_at: "Doado em %{date}"
 
   titles:
@@ -57,7 +59,7 @@
       compare: "Comparando adoção com o pedido"
       create: "Adotando Pedido"
     request:
-      adopt: "Adote um pedido"
+      adopt: "Pedidos Doados"
       comments: "Comentários"
       create: "Pedido para Adoção"
       observation: "Comentário do doador:"
