@@ -28,6 +28,7 @@ button{
 
 body{
   background-color: $color_white;
+  overflow-y: scroll;
   > div{
     @include container();
   }
@@ -287,9 +288,6 @@ aside{
 }
 
 #diff{
-  li{
-    @extend .p
-  }
   del{
     color: #FF0033;
   }
