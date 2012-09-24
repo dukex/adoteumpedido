@@ -15,7 +15,10 @@
       <h1> <%= link_to t(:name, scope: [:application]), root_path %> </h1>
       <nav>
         <ul>
-          <li> <%= link_to t(:request, scope: [:application, :navigation]), requests_path, :class => 'active'  %> </li>
+          <li> <%= link_to t(:home, scope: [:application, :navigation]), requests_path, :class => 'active' %> </li>
+          <li> <%= link_to t(:how_to, scope: [:application, :navigation]), root_path %> </li>
+          <li> <%= link_to t(:new_request, scope: [:application, :navigation]), new_request_path %> </li>
+          <li> <%= link_to t(:show_request, scope: [:application, :navigation]), requests_path %> </li>
         </ul>
       </nav>
     </header>

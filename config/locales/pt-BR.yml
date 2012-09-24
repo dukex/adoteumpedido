@@ -13,9 +13,10 @@
   application:
     name: "Adote um Pedido"
     navigation:
-      request: Pedidos
-      how_to: Como Funciona?
-      my_account: Minha Conta
+      home: "Inicio"
+      how_to: "Entenda como funciona"
+      new_request: "Colocar pedido para adoção"
+      show_request: "Conhecer pedidos doados"
   comment:
     created_at: "Comentado em %{date}"
   formtastic:

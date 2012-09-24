@@ -60,7 +60,7 @@ header{
   margin-bottom: 20px;
   @include clearfix;
   nav{
-    @include columns(6, true);
+    @include columns(7, true);
     li{
       float: left;
       a{
@@ -76,7 +76,7 @@ header{
         }
       }
       + li{
-        margin-left: 30px;
+        margin-left: 20px;
       }
     }
   }
