@@ -6,35 +6,34 @@
       adopt: Adoção
   adopt:
     action:
-      new: "Adotar esse pedido"
-    created_at: "Adotado em %{date}"
-    headline: Adoção do pedido %{link}
-
+      new: "Adote esse Pedido"
+    created_at: "Pedido adotado em %{date}"
+    headline: "Adoções desse pedido %{link}"
   application:
     name: "Adote um Pedido"
     navigation:
-      home: "Inicio"
+      home: "Início"
       how_to: "Entenda como funciona"
-      new_request: "Colocar pedido para adoção"
+      new_request: "Doar pedido"
       show_request: "Conhecer pedidos doados"
   comment:
     created_at: "Comentado em %{date}"
   formtastic:
     actions:
       adopt:
-        create: "Adotar!"
+        create: "Adotar Pedido!"
       comment:
-        create: "Comentar"
+        create: "Comentar Pedido!"
       request:
-        create: "Criar Pedido"
+        create: "Doar Pedido!"
     hints:
       request:
-        resume: Texto para dica do resumo
-        description: Texto para dica da descrição
-        observation: Texto para dica da observação
+        resume: "Um resumo de uma linha sobre a informação que você está pedindo, como se fosse o assunto de um e-mail. Exemplo: 'Estatísticas de crime por bairro na cidade de São Paulo'"
+        description: "Procure escrever de forma simples, específica e com foco, o pedido de informação que você deseja doar para adoção."
+        observation: "Explique porque esse pedido é interessante, revelador, de interesse público, e porque alguém deveria adotá-lo."
     labels:
-      resume: "Resumo"
-      description: "Descrição"
+      resume: "Assunto"
+      description: "Pedido"
       observation: "Comentário"
       body: "Comentário"
   pluralize:
@@ -49,16 +48,16 @@
   request:
     action:
       how_to: "Entenda como funciona"
-      new: "Colocar pedido para adoção"
+      new: "Doar pedido"
       show: "Conhecer pedidos doados"
     created_at: "Doado em %{date}"
 
   titles:
     adopt:
-      show: "Adoções"
-      comments: "Comentarios do pedido"
-      compare: "Comparando adoção com o pedido"
-      create: "Adotando Pedido"
+      show: "Adoções desse pedido"
+      comments: "Comentários desse pedido"
+      compare: "Comparar pedido doado com pedido adotado"
+      create: "Formulário para adoção de pedido"
     request:
       adopt: "Pedidos Doados"
       comments: "Comentários"
