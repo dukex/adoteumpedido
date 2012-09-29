@@ -11,7 +11,7 @@
 </div>
 
 <aside id="adopt_aside" class="span4">
-  <% unless @request.comments.blank? %>
+  <% unless @request.observation.blank? and @request.comments.blank? %>
     <div id="comments">
       <h3> <%= t(:comments, scope: [:titles, :adopt]) %> </h3>
       <% unless @request.observation.blank? %>

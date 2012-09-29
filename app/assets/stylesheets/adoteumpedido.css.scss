@@ -190,6 +190,17 @@ form{
   }
 }
 
+#observation{
+  @extend blockquote;
+  border-color: $color_secondary;
+  padding: 15px;
+  background-color: #FFF;
+  margin-bottom: 20px;
+  p{
+    margin-bottom: 10px
+  }
+}
+
 #new_adopt_container, #request, #adopt{
   .actions{
     width: auto;
@@ -200,16 +211,6 @@ form{
   }
   textarea, input{
     width: 100%;
-  }
-  #observation{
-    @extend blockquote;
-    border-color: $color_secondary;
-    padding: 15px;
-    background-color: #FFF;
-    margin-bottom: 20px;
-    p{
-      margin-bottom: 10px
-    }
   }
 }
 
