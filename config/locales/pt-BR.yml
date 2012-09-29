@@ -29,7 +29,7 @@
     hints: #dicas sobre os campos ao lado
       request:
         resume: "Um resumo de uma linha sobre a informação que você está pedindo, como se fosse o assunto de um e-mail. Exemplo: 'Estatísticas de crime por bairro na cidade de São Paulo'"
-        description: "Procure escrever de forma simples e objetiva o pedido de informação que você deseja deixar para adoção. Escreva como se já estivesse mandando direto para o órgáo público."
+        description: "Procure escrever de forma simples e objetiva o pedido de informação que você deseja deixar para adoção. Escreva como se já estivesse enviando direto para o órgáo público. ATENÇÃO: Não coloque informações que permitam revelar a sua identidade."
         observation: "Explique porque esse pedido é interessante, revelador, de interesse público e porque alguém deveria adotá-lo."
     labels: #título do campo
       adopt:
