@@ -3,7 +3,8 @@ namespace :db do
     require 'ffaker'
 
     40.times.each do |i|
-      Foi.create! description: Faker::Lorem.paragraphs.join("\n"), org: Faker::Company.name, observation: Faker::Lorem.paragraphs.join("\n"), resume: Faker::Lorem.paragraphs(1).join("\n")
+      Request.create! description: Faker::Lorem.paragraphs.join("\n"), observation: Faker::Lorem.paragraphs(1).join("\n"), resume: Faker::Lorem.paragraphs(1).join("\n")
+      Comment.create! body: Faker::Lorem.paragraphs(1).join("\n\n"), request_id: Request.all.shuffle.last.id
     end
   end
 end
