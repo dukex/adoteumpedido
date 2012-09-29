@@ -29,7 +29,7 @@
     hints:
       request:
         resume: "Um resumo de uma linha sobre a informação que você está pedindo, como se fosse o assunto de um e-mail. Exemplo: 'Estatísticas de crime por bairro na cidade de São Paulo'"
-        description: "Procure escrever de forma simples, específica e com foco, o pedido de informação que você deseja doar para adoção."
+        description: "Procure escrever de forma simples, específica e com foco, o pedido de informação que você deseja deixar para adoção."
         observation: "Explique porque esse pedido é interessante, revelador, de interesse público, e porque alguém deveria adotá-lo."
     labels:
       resume: "Assunto"
@@ -63,3 +63,4 @@
       comments: "Comentários"
       create: "Pedido para Adoção"
       observation: "Comentário do doador:"
+      description: "Texto do pedido feito pelo doador"
