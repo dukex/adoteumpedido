@@ -1,11 +1,6 @@
 <h2> <%= t(:create, scope: [:titles, :adopt]) %> </h2>
 
 <div id="new_adopt_container">
-  <% unless @request.observation.blank? %>
-    <div id="observation">
-      <%= simple_format @request.observation %>
-    </div>
-  <% end %>
   <%= semantic_form_for [@request, @adopt] do |f| %>
     <%= f.inputs :resume, :description %>
     <%= f.actions do %>
@@ -18,6 +13,12 @@
   <% unless @request.comments.blank? %>
     <div id="comments">
       <h3> <%= t(:comments, scope: [:titles, :adopt]) %> </h3>
+      <% unless @request.observation.blank? %>
+        <div id="observation">
+          <%= simple_format @request.observation %>
+        </div>
+      <% end %>
+
       <ul>
         <% @request.comments.each do |comment| %>
           <li>
