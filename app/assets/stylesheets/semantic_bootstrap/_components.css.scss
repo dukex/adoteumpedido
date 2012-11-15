@@ -1,6 +1,0 @@
-@mixin alert($type: ""){
-  @extend .alert;
-  @if(type != ""){
-    @extend .alert-#{$type}
-  }
-}

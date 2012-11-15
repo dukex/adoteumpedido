@@ -2,9 +2,7 @@
 @import "compass/reset";
 @import "bourbon/bourbon";
 @import "bootstrap";
-@import "semantic_bootstrap/grid";
 @import "semantic_bootstrap/base";
-@import "semantic_bootstrap/components";
 
 $color_main: #69D2E7;
 $color_main_v: #A7DBD8;
@@ -29,9 +27,6 @@ button{
 body{
   background-color: $color_white;
   overflow-y: scroll;
-  > div{
-    @include container();
-  }
   ul, ol{
     margin-left: 0;
   }
@@ -45,22 +40,12 @@ time{
   color: $color_main;
 }
 
-#notice{
-  @include alert;
-}
-
-.adopt_headline{
-  @include alert(success)
-}
-
 header{
-  @include row(true);
   border-bottom: 2px solid $color_main;
   padding-top: 30px;
   margin-bottom: 20px;
   @include clearfix;
   nav{
-    @include columns(7, true);
     li{
       float: left;
       a{
@@ -81,9 +66,8 @@ header{
     }
   }
   h1{
-    @include columns(5);
     margin: 0;
-    float: right;
+    float: right !important;
     font-size: modular-scale(14px, 1, 1.618);
     font-weight: 700;
     line-height: modular-scale(14px, 1, 1.618);
@@ -96,7 +80,6 @@ header{
 }
 
 #welcome{
-  @include row(true);
   margin: 50px 0 30px;
   p{
     @include lead;
@@ -144,17 +127,15 @@ header{
     margin: 0 {
       bottom: 10px
     }
-    @include columns(8);
     color: $color_black;
   }
   blockquote{
-    @include columns(3, true);
-    float: right;
     font-size: 12px;
+    float: rigth;
     color: lighten($color_black, 30%);
   }
   .info{
-    @include columns(8);
+    overflow: hidden;
     margin: 15px 0 0;
     li{
       float: left;
@@ -165,8 +146,6 @@ header{
 }
 
 form{
-  @include row(true);
-
   li{
     @include clearfix;
     position: relative;
@@ -182,12 +161,10 @@ form{
     }
   }
   textarea, input{
-    @include columns(7, true);
-    float: left;
     left: 10px;
+    float: left !important;
   }
   .inline-hints{
-    @include columns(5);
     float: right;
   }
   .inline-errors{
@@ -197,7 +174,6 @@ form{
     font-weight: 700;
   }
   .actions{
-    @include columns(7, true);
     button{
       float: right;
       margin: 0 15px 0 0;
@@ -206,7 +182,6 @@ form{
 }
 
 #new_adopt_container, #request, #adopt{
-  @include columns(8, true);
   .actions{
     width: auto;
     float: right;
@@ -265,7 +240,6 @@ form{
 }
 
 aside{
-  @include columns(4, true);
   float: right;
   #adopts, #comments{
     h3{

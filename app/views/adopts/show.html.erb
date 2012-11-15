@@ -1,9 +1,9 @@
 <% if notice %>
-  <p id="notice"><%= notice %></p>
+  <p  class="alert" id="notice"><%= notice %></p>
 <% end %>
 
 
-<h4 class="adopt_headline"> <%= raw t(:headline, scope: [:adopt], link: link_to(@request.resume, @request)) %> </h4>
+<h4 class="adopt_headline alert alert-success"> <%= raw t(:headline, scope: [:adopt], link: link_to(@request.resume, @request)) %> </h4>
 <h2> <%= @adopt.resume %> </h2>
 <section id="adopt">
   <div id="description">

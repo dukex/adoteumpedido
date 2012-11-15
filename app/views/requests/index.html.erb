@@ -1,4 +1,3 @@
-
 <section id="orphans_requests">
   <h1> <%= t(:adopt, scope: [:titles, :request]) %> </h1>
   <ul id="requests">
@@ -6,9 +5,9 @@
       <li class="request">
         <%= link_to request do %>
           <%= time_tag request.created_at, request.created_at.to_s(:short) %>
-          <h3><%= request.resume %></h3>
-          <blockquote> <%= request.description[0..100] %>... </blockquote>
-          <ul class="info">
+          <h3 class="span8"><%= request.resume %></h3>
+          <blockquote class="span3"> <%= request.description[0..100] %>... </blockquote>
+          <ul class="info span9">
             <li><%= count(request.comments) %></li>
             <li><%= count(request.adopts) %></li>
           </ul>

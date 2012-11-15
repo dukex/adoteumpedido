@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title> <%= t(:name, scope: [:application]) %> </title>
+  <head>
+    <meta charset="utf-8">
+    <title> <%= t(:name, scope: [:application]) %> </title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
     <header>
-      <h1> <%= link_to t(:name, scope: [:application]), root_path %> </h1>
-      <nav>
-        <ul>
-          <li> <%= link_to t(:home, scope: [:application, :navigation]), requests_path, :class => 'active' %> </li>
-          <li> <%= link_to t(:how_to, scope: [:application, :navigation]), root_path %> </li>
-          <li> <%= link_to t(:new_request, scope: [:application, :navigation]), new_request_path %> </li>
-          <li> <%= link_to t(:show_request, scope: [:application, :navigation]), requests_path %> </li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div class="row">
+          <h1 class="span3"> <%= link_to t(:name, scope: [:application]), root_path %> </h1>
+          <nav class="span7">
+            <ul>
+              <li> <%= link_to t(:home, scope: [:application, :navigation]), requests_path, :class => 'active' %> </li>
+              <li> <%= link_to t(:how_to, scope: [:application, :navigation]), root_path %> </li>
+              <li> <%= link_to t(:new_request, scope: [:application, :navigation]), new_request_path %> </li>
+              <li> <%= link_to t(:show_request, scope: [:application, :navigation]), requests_path %> </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <div>
-      <%= yield %>
+
+    <div class="container">
+      <div>
+        <%= yield %>
+      </div>
     </div>
-  </div>
-  <footer>
-  </footer>
-</body>
+    <footer>
+    </footer>
+  </body>
 </html>

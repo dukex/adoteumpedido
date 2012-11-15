@@ -1,9 +1,10 @@
 <% if notice %>
-  <p id="notice"><%= notice %></p>
+  <p class="alert" id="notice"><%= notice %></p>
 <% end %>
 
 <h2> <%= @request.resume %> </h2>
-<section id="request">
+<div class="row">
+<section id="request" class="span8">
   <div id="description">
     <%= simple_format @request.description %>
   </div>
@@ -35,7 +36,7 @@
   </section>
 </section>
 
-<aside id="request_aside">
+<aside id="request_aside" class="span4">
   <div id="new_adopt_link">
     <%= link_to t(:new, scope: [:adopt, :action]), new_request_adopt_path(@request) %>
   </div>
@@ -55,3 +56,4 @@
     </div>
   <% end %>
 </aside>
+</div>

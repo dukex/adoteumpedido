@@ -1,6 +1,7 @@
 <h2> <%= t(:create, scope: [:titles, :adopt]) %> </h2>
 
-<div id="new_adopt_container">
+<div class="row">
+<div id="new_adopt_container" class="span8">
   <%= semantic_form_for [@request, @adopt] do |f| %>
     <%= f.inputs :resume, :description %>
     <%= f.actions do %>
@@ -9,7 +10,7 @@
   <% end %>
 </div>
 
-<aside id="adopt_aside">
+<aside id="adopt_aside" class="span4">
   <% unless @request.comments.blank? %>
     <div id="comments">
       <h3> <%= t(:comments, scope: [:titles, :adopt]) %> </h3>
@@ -30,3 +31,4 @@
     </div>
   <% end %>
 </aside>
+</div>
