@@ -50,11 +50,11 @@
   request:
     action:
       how_to: "Entenda como funciona"
-      new: "Doar pedido"
-      show: "Conhecer pedidos doados"
+      new: "DOE UM PEDIDO"
+      show: "ADOTE UM PEDIDO"
     created_at: "Doado em %{date}"
-
   titles:
+    home: 'Como assim "adote" um pedido?'
     adopt:
       show: "Adoções desse pedido"
       comments: "Comentários desse pedido"
@@ -66,3 +66,10 @@
       create: "Pedido para Adoção"
       observation: "Comentário do doador:"
       description: "Texto do pedido feito pelo doador"
+  texts:
+    home: |
+      O <strong>Adote um Pedido</strong> veio contornar um obstáculo ao acesso à informação no Brasil: aqui, ao contrário do que acontece em outros países, não é possível solicitar informações dos órgãos públicos de forma anônima.
+
+      Muitas vezes, a identificação pode levar à retaliação e a intimidações, impedindo que informações públicas venham, de fato, a público. O <strong>Adote um Pedido</strong> promove um encontro entre aqueles que querem fazer um pedido e não podem se expor; e aqueles que não estão submetidos aos mesmos constrangimentos e podem passar esse pedido adiante.
+
+      Liberte uma informação:
