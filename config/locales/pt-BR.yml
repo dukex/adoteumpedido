@@ -54,6 +54,7 @@
       show: "ADOTE UM PEDIDO"
     created_at: "Doado em %{date}"
   titles:
+    about: "Como funciona o Adote um Pedido?"
     home: 'Como assim "adote" um pedido?'
     adopt:
       show: "Adoções desse pedido"
@@ -70,6 +71,29 @@
     home: |
       O <strong>Adote um Pedido</strong> veio contornar um obstáculo ao acesso à informação no Brasil: aqui, ao contrário do que acontece em outros países, não é possível solicitar informações dos órgãos públicos de forma anônima.
 
-      Muitas vezes, a identificação pode levar à retaliação e a intimidações, impedindo que informações públicas venham, de fato, a público. O <strong>Adote um Pedido</strong> promove um encontro entre aqueles que querem fazer um pedido e não podem se expor; e aqueles que não estão submetidos aos mesmos constrangimentos e podem passar esse pedido adiante.
+      Muitas vezes, a identificação pode levar à retaliação e a intimidações, impedindo que informações públicas venham, de fato, a público. O Adote um Pedido promove um encontro entre aqueles que querem fazer um pedido e não podem se expor; e aqueles que não estão submetidos aos mesmos constrangimentos e podem passar esse pedido adiante.
 
       Liberte uma informação:
+    about: |
+      Você registra o seu pedido preenchendo apenas três simples campos e pronto! Simples, huh?
+      Os pedidos de informação colocados para adoção são publicados imediatamente em uma lista e qualquer cidadã(o) pode comentá-lo. E mais do que isso: alguém pode simpatizar com o seu pedido e encaminhá-lo ao órgão responsável pela resposta por meio da plataforma Queremos Saber. (aqui vai um link para o QS)
+      É  importante que você não coloque informações muito específicas que  possam facilitar a identificação da fonte (provavelmente, você) pelo conteúdo do texto.
+      <h3>Para quê serve o recurso de comentários?</h3>O recurso de comentários permite que outras pessoas enriqueçam o pedido original com outras considerações, e que melhorem a redação para torná-lo mais potente, etc. Uma boa redação é condição necessária para que o órgão público tenha clareza do que deverá responder a(o) cidadã(o). Há órgãos que darão respostas excelentes, e outros que darão a pior resposta possível, degradadas, incompletas, saindo pela tangente (sinal de que o pedido incomodou!).
+      <h3>O que é o Queremos Saber?</h3>O Queremos Saber é uma plataforma livre para pedidos de informação pública. Por meio dela, qualquer cidadão pode encaminhar publicamente pedidos de informação pública para os órgãos responsáveis, cujas respostas também serão públicas. Assim, todo mundo fica sabendo o que (e se) os órgãos públicos estão respondendo, e não apenas a pessoa que realizou o pedido de informação, que é o caso dos Serviços de Informação ao Cidadão (SIC) atualmente criados pelos governos no Brasil.
+      <h3>Para quê serve o recurso de comentários?</h3>O recurso de comentários permite que outras pessoas enriqueçam o pedido original com outras considerações, e que melhorem a redação para torná-lo mais efetivo, etc. Uma boa redação é condição necessária para que o órgão público tenha clareza do que deverá responder a(o)  cidadã(o).
+
+      Há órgãos que darão respostas excelentes, e outros que darão a pior resposta possível, degradadas, incompletas, saindo pela tangente (sinal de que o pedido incomodou!). Uma boa redação deve ser "preventiva": prevenção contra incompetência, má vontade e má fé. A construção colaborativa de redações tem o potencial de aperfeiçoar os pedidos de informação.
+      <h3>Por quê garantir o sigilo dos "doadores" de pedidos?</h3>Coronelismo, patrimonialismo, perseguição política por chefes que temem a revelação de verdades inconvenientes...
+
+      Às vezes temos um certo receio de como as nossas palavras serão interpretadas pelas outras pessoas. Ainda mais quando essa "outra pessoa" é responsável pelo orgão de algum Governo que ainda está no Feudalismo, com práticas não-republicanas, não-transparentes e não-democráticas.
+
+      O Adote um Pedido proporciona uma forma de criar um pedido de informação pública de forma completamente sigilosa. Você pode pedir, virtualmente, qualquer informação pública.
+      <h3>O quanto isso é sigiloso?</h3>Todo o processo é sigiloso. Você não precisa criar nenhum cadastro, seja para criar um pedido ou para comentar!
+
+      Além disso, o Adote um Pedido foi desenvolvido com tecnologia capaz de garantir que nenhuma informação que permita rastrear os "doadores" de pedidos ou os comentaristas seja armazenada. Nenhuma! Nem endereço IP, nem horário de envio: n-a-d-a!
+
+      É isso que garante a privacidade de pessoas que sabem da existência de informações interessantes que deveriam estar disponíveis publicamente, mas sentem-se de alguma maneira constrangidos a fazer o pedido em seus próprios nomes.
+
+      Dessa forma, ninguém consegue fazer o caminho inverso e descobrir de quem ou de onde veio a ideia original do pedido. Fazer um pedido de informações, afinal, é diferente de fazer uma denúncia ou de manifestar o pensamento: trata-se de uma pergunta, não de uma afirmação.
+
+      Além de tudo isso, o Adote um Pedido foi desenvolvido como software livre, o que permite que qualquer pessoa possa auditar o código-fonte ou instalar outra versão em qualquer lugar do mundo.

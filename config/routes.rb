@@ -6,5 +6,6 @@ AdoteSeuPedido::Application.routes.draw do
     resources :adopts, only: [:new, :show, :create]
   end
 
+  match "/entenda" => "application#about", as: 'about'
   root to: "application#index"
 end
