@@ -5,8 +5,8 @@
   <p>Os pedidos colocados para "adoção" ficarão disponíveis em uma lista aberta para que possam ser "adotados" por qualquer cidadã(o). A ideia é proteger o(a) autor(a) do pedido e, ao mesmo tempo, viabilizar o encaminhamento de pedidos de informação de interesse público. Além disso, no Adote um Pedido, o "doador" tem a possibilidade de explicar porque o respectivo pedido é interessante, revelador, etc., e qualquer pessoa pode comentá-lo, criticá-lo, enriquecê-lo, melhorar sua redação, etc.</p>
 </div>
 
-<div id="home_links">
-  <%= link_to t(:how_to, scope: [:request, :action]), root_path %>
-  <%= link_to t(:new, scope: [:request, :action]), new_request_path %>
-  <%= link_to t(:show, scope: [:request, :action]), requests_path %>
+<div id="home_links" class="row-fluid">
+  <span class="offset3 span12"></span>
+    <%= link_to t(:new, scope: [:request, :action]), new_request_path, class: "btn btn-success span3 offset3" %>
+    <%= link_to t(:show, scope: [:request, :action]), requests_path, class: "btn btn-success span3" %>
 </div>
