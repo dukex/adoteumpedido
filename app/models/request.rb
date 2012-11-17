@@ -4,6 +4,8 @@ class Request < ActiveRecord::Base
   has_many :comments
   has_many :adopts
 
+  belongs_to :authority
+
   validates :resume, presence: true
   validates :description, presence: true
 end

@@ -2,6 +2,8 @@
   <h2> <%= t(:create, scope: [:titles, :request]) %> </h2>
   <%= semantic_form_for @request do |f| %>
     <%= f.inputs do %>
+      <%= f.input :authority_id, as: :hidden %>
+      <%= f.input :authority, as: :string, input_html: {id: "authorities", class: "span7"} %>
       <%= f.input :resume, input_html: {class: "span7"} %>
       <%= f.input :description, input_html: {class: "span7"} %>
       <%= f.input :observation, input_html: {rows: "5", class: "span7"} %>
