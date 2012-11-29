@@ -1,4 +1,6 @@
 AdoteSeuPedido::Application.routes.draw do
+  get "authorities" => "authority#index"
+
   devise_for :users
 
   resources :requests, only: [:index, :show, :new, :create] do
