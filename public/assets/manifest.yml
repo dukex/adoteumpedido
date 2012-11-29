@@ -1,7 +1,8 @@
 ---
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
-application.js: application-8c9b251148e9aed99c2b1f3b18dc7fd8.js
-application.css: application-6d1720572cb454a5aa44d6a0204fdcad.css
+adote.js.cofee: adote.js-71c9eaf3c06bffedf041f8d52c511254.cofee
+application.js: application-9cee06dd9ed25bb094b1d0a698d904e0.js
+application.css: application-4a70046d2ac97b4943b6f3698426a3b0.css
 bourbon/lib/bourbon.rb: bourbon/lib/bourbon-8432a9b0adc6b69a876fc7521f29c18f.rb
 bourbon/lib/bourbon/sass_extensions.rb: bourbon/lib/bourbon/sass_extensions-1c1262ac2936840a3e5b9d2601350210.rb
 bourbon/lib/bourbon/sass_extensions/functions.rb: bourbon/lib/bourbon/sass_extensions/functions-c6bb867868d410ed26c964c6374de2b9.rb
