@@ -38,6 +38,7 @@
       description: "Pedido"
       observation: "Comentário"
       body: "Comentário"
+      authority: "Orgão"
   pluralize:
     adopts:
       adopt: 'adoção'
