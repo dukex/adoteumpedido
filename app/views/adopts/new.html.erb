@@ -5,6 +5,7 @@
   <%= semantic_form_for [@request, @adopt] do |f| %>
     <%= f.inputs :resume, :description %>
     <%= f.actions do %>
+      <li> <%= raw t(:warning, scope: [:adopt]) %> </li>
       <%= f.action :submit, :as => :button %>
     <% end %>
   <% end %>

@@ -9,6 +9,7 @@
       new: "Adote esse Pedido"
     created_at: "Pedido adotado em %{date}"
     headline: "Adoções desse pedido %{link}"
+    warning: "* Você será redirecionado para o site <strong>queremossaber.org.br</strong>"
   application:
     name: "Adote um Pedido"
     navigation:
