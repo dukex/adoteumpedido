@@ -14,8 +14,12 @@ class AdoptsController < ApplicationController
   end
 
   def create
-    @adopt = Adopt.create params[:adopt]
-    respond_with @request, @adopt
+    @adopt = Adopt.new params[:adopt]
+    if @adopt.save
+      redirect_to "http://queremossaber.org.br/pt/new/#{@adopt.request.authority.url_name}?title=#{URI.escape(@adopt.resume)}&default_letter=#{URI.escape(@adopt.description)}"
+    else
+      respond_with @request, @adopt
+    end
   end
 
   private
