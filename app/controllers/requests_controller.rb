@@ -17,11 +17,7 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.new(params[:request].except(:authority))
-    if @request.save
-      redirect_to "http://queremossaber.org.br/#{@request.authority.url_name}"
-    else
-      respond_with @request
-    end
+    @request = Request.create(params[:request].except(:authority))
+    respond_with @request
   end
 end
