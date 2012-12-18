@@ -1,5 +1,5 @@
 $(document).ready =>
-  $("#authorities")
+  $("#search_authority")
     .typeahead
       source: (typeahead, query) ->
         $.ajax
@@ -9,4 +9,6 @@ $(document).ready =>
             typeahead.process(data)
       property: "name"
       onselect: (authority)->
+        $("#search_authority").val ""
+        $("#authority").val authority.name
         $("#request_authority_id").val authority.id

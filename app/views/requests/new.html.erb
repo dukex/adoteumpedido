@@ -3,7 +3,12 @@
   <%= semantic_form_for @request do |f| %>
     <%= f.inputs do %>
       <%= f.input :authority_id, as: :hidden %>
-      <%= f.input :authority, as: :string, input_html: {id: "authorities", class: "span7"} %>
+      <li class="string input optional stringish" id="request_search_authority_input">
+        <label class=" label" for="search_authority"> <%= t(:search_authority, scope: [:formtastic, :labels]) %> </label>
+        <input class="span7" id="search_authority" type="text">
+        <p class="inline-hints span5"><%= t(:search_authority, scope: [:formtastic, :hints, :request]) %> </p>
+      </li>
+      <%= f.input :authority, as: :string, input_html: {id: "authority", readonly: true, class: "span7"} %>
       <%= f.input :resume, input_html: {class: "span7"} %>
       <%= f.input :description, input_html: {class: "span7"} %>
       <%= f.input :observation, input_html: {rows: "5", class: "span7"} %>
