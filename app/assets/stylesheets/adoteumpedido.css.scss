@@ -40,6 +40,17 @@ time{
   color: $color_main;
 }
 
+footer{
+  margin-top: 60px;
+  border-top: 1px solid $color_main;
+  padding-top: 30px;
+  p.lead{
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+
 header{
   border-bottom: 2px solid $color_main;
   padding-top: 30px;
