@@ -51,6 +51,7 @@
       if (typeof this.onselect == "function")
           this.onselect(val)
 
+      this.listen()
       return this.hide()
     }
 
@@ -192,6 +193,7 @@
         .on('blur',     $.proxy(this.blur, this))
         .on('keypress', $.proxy(this.keypress, this))
         .on('keyup',    $.proxy(this.keyup, this))
+        .on('click',    $.proxy(this.click, this))
 
       if ($.browser.webkit || $.browser.msie) {
         this.$element.on('keydown', $.proxy(this.keypress, this))
