@@ -59,7 +59,7 @@ header{
   nav{
     li{
       float: left;
-      a{
+      a, a:visited{
         color: $color_secondary;
         font-family: $helvetica;
         font-size: 12px;
