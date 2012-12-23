@@ -1,7 +1,6 @@
 class AdoptsController < ApplicationController
   respond_to :json, :html
   before_filter :assign_request
-  before_filter :assign_user, only: [:create]
 
   def show
     @adopt = Adopt.find(params[:id])
@@ -23,10 +22,6 @@ class AdoptsController < ApplicationController
   end
 
   private
-    def assign_user
-      params[:adopt][:user_id] = current_user.id if current_user && current_user.id
-    end
-
     def assign_request
       @request = Request.find(params[:request_id])
       params[:adopt][:request_id] = params[:request_id] if params[:adopt]

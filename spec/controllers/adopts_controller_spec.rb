@@ -44,19 +44,6 @@ describe AdoptsController do
       post :create, adopt: {description: nil}, request_id: request.id
       response.should render_template(:new)
     end
-
-    context "with a user" do
-      let(:user){ create(:user) }
-
-      before(:each) do
-        sign_in user
-      end
-
-      it "should create to current user" do
-        post :create, adopt: {description: "Ola Mundo", resume: "Ola"}, request_id: request.id
-        Adopt.last.user.should == user
-      end
-    end
   end
 
 
