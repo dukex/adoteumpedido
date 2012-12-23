@@ -9,7 +9,7 @@
           <blockquote class="span3"> <%= request.description[0..100] %>... </blockquote>
           <ul class="info span9">
             <li><%= count(request.comments) %></li>
-            <li><%= count(request.adopts) %></li>
+            <li><%= count(request.confirmed_adopts) %></li>
           </ul>
         <% end %>
       </li>

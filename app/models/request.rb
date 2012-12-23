@@ -9,4 +9,8 @@ class Request < ActiveRecord::Base
   validates :resume, presence: true
   validates :description, presence: true
   validates :authority_id, presence: true
+
+  def confirmed_adopts
+    adopts.confirmed
+  end
 end
