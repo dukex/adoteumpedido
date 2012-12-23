@@ -26,12 +26,12 @@ describe RequestsController do
 
   describe "POST create" do
     it "should create a request with params" do
-      post :create, request: {description: "Ola Mundo", resume: "Ola"}
+      post :create, request: {description: "Ola Mundo", resume: "Ola",  authority_id: create(:authority).id}
       Request.last.description.should == "Ola Mundo"
     end
 
     it "should redirect to request path" do
-      post :create, request: {description: "Ola Mundo", resume: "Ola"}
+      post :create, request: {description: "Ola Mundo", resume: "Ola",  authority_id: create(:authority).id}
       response.should redirect_to(request_path(Request.last))
     end
   end
