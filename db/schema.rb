@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120929023919) do
+ActiveRecord::Schema.define(:version => 20121223203000) do
 
   create_table "adopts", :force => true do |t|
     t.integer  "request_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20120929023919) do
     t.text     "description"
     t.date     "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.boolean  "confirmed"
   end
 
   create_table "authorities", :force => true do |t|
