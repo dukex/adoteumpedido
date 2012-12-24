@@ -1,5 +1,17 @@
 <section id="orphans_requests">
   <h1> <%= t(:adopt, scope: [:titles, :request]) %> </h1>
+
+  <!--
+  <form id="search_request">
+    <ul>
+      <li>
+        <label for="q_resume_contains"> Por Titulo </label>
+        <input id="q_resume_contains" name="q[resume_contains]" />
+      </li>
+    </ul>
+  </form>
+  -->
+
   <ul id="requests">
     <% @requests.each do |request| %>
       <li class="request">

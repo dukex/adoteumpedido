@@ -1,8 +1,9 @@
 class RequestsController < ApplicationController
   respond_to :json, :html
+  before_filter :assign_search, only: [:index]
 
   def index
-    @requests = Request.all
+    @requests = @search.all
     respond_with @requests
   end
 
@@ -20,4 +21,13 @@ class RequestsController < ApplicationController
     @request = Request.create(params[:request].except(:authority))
     respond_with @request
   end
+
+  private
+    def assign_search
+      if params[:q]
+        @search = Request.search params[:q]
+      else
+        @search = Request
+      end
+    end
 end
