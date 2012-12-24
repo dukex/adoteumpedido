@@ -44,9 +44,9 @@
       search_authority: "Buscar Órgão"
   pluralize:
     adopts:
-      adopt: 'adoção'
-      adopts: 'adoções'
-      noadopts: 'nenhuma adoção'
+      adopt: 'adoção confirmada'
+      adopts: 'adoções confirmadas'
+      noadopts: 'nenhuma adoção confirmada'
     comments:
       comment: 'comentário'
       comments: 'comentários'
