@@ -34,6 +34,7 @@ GEM
       activesupport (= 3.2.11)
       arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
+    activerecord-reputation-system (2.0.2)
     activeresource (3.2.11)
       activemodel (= 3.2.11)
       activesupport (= 3.2.11)
@@ -222,6 +223,7 @@ PLATFORMS
 DEPENDENCIES
   ZenTest
   activeadmin
+  activerecord-reputation-system
   autotest
   bourbon
   coffee-rails (~> 3.2.1)
