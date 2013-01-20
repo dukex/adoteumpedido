@@ -6,6 +6,8 @@ class Adopt < ActiveRecord::Base
   validates :resume, presence: true
   validates :description, presence: true
 
+  default_scope where(status: 1)
+
 
   def diff
     Diffy::Diff.new(request.description, description).to_s(:html_simple)
