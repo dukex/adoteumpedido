@@ -4,7 +4,8 @@
 
 
 <h4 class="adopt_headline alert alert-success"> <%= raw t(:headline, scope: [:adopt], link: link_to(@request.resume, @request)) %> </h4>
-<h2> <%= @adopt.resume %> </h2>
+
+<h2 class="resume"> <small> Adoção </small> <br /> <%= @adopt.resume %> </h2>
 <section id="adopt">
   <div id="description">
     <%= simple_format @adopt.description %>

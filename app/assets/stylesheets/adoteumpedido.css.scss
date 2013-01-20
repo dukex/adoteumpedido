@@ -50,6 +50,13 @@ footer{
   }
 }
 
+h2.resume{
+  line-height: 33px;
+  margin-top: 0;
+  small{
+    line-height: 12px;
+  }
+}
 
 header{
   border-bottom: 2px solid $color_main;
@@ -264,7 +271,7 @@ aside{
   float: right;
   #adopts, #comments{
     h3{
-      margin-top: 0;
+      margin-top: 10px;
     }
     li{
       padding: 0 5px 10px 5px;
