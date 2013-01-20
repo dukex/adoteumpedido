@@ -11,15 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120929023919) do
+ActiveRecord::Schema.define(:version => 20130120194113) do
 
   create_table "adopts", :force => true do |t|
     t.integer  "request_id"
     t.integer  "user_id"
     t.string   "resume"
     t.text     "description"
-    t.date     "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.date     "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "status",         :default => 0
+    t.string   "waiting_token"
+    t.string   "alavateli_link"
   end
 
   create_table "authorities", :force => true do |t|
