@@ -52,7 +52,7 @@ idea! the app logs are important to debug app
 ### on Web Server
 
 We need only disable web server log, please see the your web server manual,
-on nginx, for example, the ```access_log``` var can be ```off``
+on nginx, for example, the ```access_log``` var can be ```off```
 
 #### Using heroku
 
