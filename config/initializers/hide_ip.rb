@@ -36,10 +36,9 @@ module Rails
 
       # Started GET "/session/new" for 127.0.0.1 at 2012-09-26 14:51:42 -0700
       def started_request_message(request)
-        'Started %s "%s" for ###.##.##.### at %s' % [
+        'Started %s "%s" for ###.##.##.###' % [
           request.request_method,
-          request.filtered_path,
-          Time.now
+          request.filtered_path
         ]
       end
 
