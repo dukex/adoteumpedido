@@ -35,3 +35,19 @@ Send it to production server and, on production server, run:
 $ rake db:import_authorities_from_alaveteli
 ```
 
+## Hide User?
+
+On app level, the ```config/initializers/hide_ip.rb``` file hide user IP, the
+request log will like that
+
+```
+Started GET "/assets/application.js?body=1" for ###.##.##.### at 2013-04-18 11:13:01 -0300
+```
+
+### Why not disable log?
+
+I tried it, sent the log to ```/dev/null```, that was a bad idea!
+
+
+
+
