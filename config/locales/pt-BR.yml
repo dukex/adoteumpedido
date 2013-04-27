@@ -8,7 +8,7 @@
     action:
       new: "Adote esse Pedido"
     created_at: "Pedido adotado em %{date}"
-    headline: "Adoções desse pedido %{link}"
+    headline: "Adoção para o pedido %{link}"
     warning: "* Você será redirecionado para o site <strong>queremossaber.org.br</strong>"
   application:
     name: "Adote um Pedido"
@@ -63,7 +63,7 @@
     adopt:
       show: "Adoções desse pedido"
       comments: "Comentários desse pedido"
-      compare: "Comparar pedido doado com pedido adotado"
+      compare: "Comparador de pedido doado com pedido adotado"
       create: "Formulário para adoção de pedido"
     request:
       adopt: "Pedidos Doados"

@@ -37,7 +37,7 @@ AdoteSeuPedido::Application.configure do
   # config.log_tags = [ :subdomain, :uuid ]
 
   # Use a different logger for distributed setups
-  # config.logger = Logger.new('/dev/null')
+  # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
