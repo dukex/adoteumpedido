@@ -1,0 +1,45 @@
+
+common: &default_settings
+  license_key: 'KEY'
+  app_name: Adote um Pedido
+  monitor_mode: true
+  developer_mode: false
+  log_level: info
+  # log_file_path: 'log'
+  # log_file_name: 'newrelic_agent.log'
+  # ssl: false
+  browser_monitoring:
+      auto_instrument: true
+  # proxy_host: hostname
+  # proxy_port: 8080
+  # proxy_user:
+  # proxy_pass:
+  audit_log:
+    enabled: false
+  capture_params: false
+  transaction_tracer:
+    enabled: true
+    transaction_threshold: apdex_f
+    record_sql: obfuscated
+    stack_trace_threshold: 0.500
+    # explain_enabled: true
+    # explain_threshold: 0.5
+  error_collector:
+    enabled: true
+    capture_source: true
+    ignore_errors: "ActionController::RoutingError,Sinatra::NotFound"
+  # capture_memcache_keys: true
+development:
+  <<: *default_settings
+  monitor_mode: false
+  developer_mode: true
+  # textmate: true
+test:
+  <<: *default_settings
+  monitor_mode: false
+production:
+  <<: *default_settings
+  monitor_mode: true
+staging:
+  <<: *default_settings
+  monitor_mode: true
