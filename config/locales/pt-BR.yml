@@ -14,9 +14,9 @@
     name: "Adote um Pedido"
     navigation:
       home: "Início"
-      how_to: "Entenda como funciona"
-      new_request: "Doar pedido"
-      show_request: "Conhecer pedidos doados"
+      how_to: "Como Funciona"
+      new_request: "Doar Pedido"
+      show_request: "Pedidos Doados"
   comment:
     created_at: "Comentado em %{date}"
   formtastic:
