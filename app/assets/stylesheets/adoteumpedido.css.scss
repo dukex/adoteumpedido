@@ -4,28 +4,20 @@
 @import "bootstrap";
 @import "semantic_bootstrap/base";
 
-$color_main: #69D2E7;
-$color_main_v: #A7DBD8;
-$color_secondary: #FA6900;
-$color_secondary_v: #F38630;
-$color_white: #F7F7F7;
-$color_black: #333;
-$color_main_to_link: darken($color_main, 25%);
+$belize_hole: #2980b9;
 
 a{
-  color: $color_main_to_link;
+  color: $belize_hole;
   &:hover, &:visited{
-    color: $color_main_to_link;
+    //color: $color_main_to_link;
     text-decoration: none;
   }
 }
 
-button{
-  @include button(success);
-}
-
 body{
-  background-color: $color_white;
+  font-family: 'Droid Serif', serif;
+  line-height: 1.8;
+  background-color: #F7F7F7;
   overflow-y: scroll;
   ul, ol{
     margin-left: 0;
@@ -37,12 +29,12 @@ time{
   display: block;
   font-size: 12px;
   font-style: italic;
-  color: $color_main;
+  //color: $color_main;
 }
 
 footer{
   margin-top: 60px;
-  border-top: 1px solid $color_main;
+  //border-top: 1px solid $color_main;
   padding-top: 30px;
   p.lead{
     font-size: 18px;
@@ -59,48 +51,60 @@ h2.resume{
 }
 
 header{
-  border-bottom: 2px solid $color_main;
-  padding-top: 30px;
-  margin-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
   @include clearfix;
   nav{
+    float: right !important;
+    max-width: 520px !important;
     li{
+      margin: 52px 0;
       float: left;
       a, a:visited{
-        color: $color_secondary;
-        font-family: $helvetica;
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 38px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-family: 'Molengo', sans-serif;
         display: block;
+        text-align: center;
+        width: 130px;
+        color: #333;
         &.active{
           text-decoration: none;
           color: #999;
         }
       }
-      + li{
-        margin-left: 20px;
-      }
     }
   }
   h1{
-    margin: 0;
-    float: right !important;
-    font-size: modular-scale(14px, 1, 1.618);
+    margin: 52px 0;
+    float: left;
     font-weight: 700;
-    line-height: modular-scale(14px, 1, 1.618);
-    text-align: right;
+    font-family: 'Clicker Script', cursive;
+    text-transform: none;
     > a, a:visited{
       text-decoration: none;
-      color: $color_main;
+      color: #000;
     }
   }
 }
 
+h1, h2, h3, h4, h5{
+  text-transform: uppercase;
+  font-family: 'Molengo';
+}
+
 #welcome{
-  margin: 50px 0 30px;
+  margin: 50px auto 0;
+  max-width: 850px;
+
+  h2{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+  }
   p{
     @include lead;
+    font-size: 18px;
   }
 }
 #home_links{
@@ -110,15 +114,15 @@ header{
     padding-top: 20px;
     padding-bottom: 20px;
     line-height: 23px;
+    color: #2c3e50;
     &:visited{
-      color: #FFF;
+      color: #34495e;
     }
   }
 }
 #new_adopt_link{
   text-align: center;
   a{
-    @include button(success);
     font-size: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -154,12 +158,12 @@ header{
     margin: 0 {
       bottom: 10px
     }
-    color: $color_black;
+    //color: $color_black;
   }
   blockquote{
     font-size: 12px;
     float: rigth;
-    color: lighten($color_black, 30%);
+    //color: lighten($color_black, 30%);
   }
   .info{
     overflow: hidden;
@@ -210,7 +214,7 @@ form{
 
 #observation{
   @extend blockquote;
-  border-color: $color_secondary;
+  //border-color: $color_secondary;
   padding: 15px;
   background-color: #FFF;
   margin-bottom: 20px;
@@ -245,7 +249,7 @@ form{
   }
 
   time{
-    color: $color_main_to_link;
+    //color: $color_main_to_link;
   }
   #comments{
     margin-top: 40px;
@@ -262,7 +266,7 @@ form{
     }
     time{
       margin-bottom: 5px;
-      color: $color_main;
+      //color: $color_main;
     }
   }
 }
@@ -300,6 +304,9 @@ aside{
 
 #about{
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.8;
   text-shadow: 1px 1px 1px #FFF;
+  h3{
+    margin: 40px 0 10px;
+  }
 }
