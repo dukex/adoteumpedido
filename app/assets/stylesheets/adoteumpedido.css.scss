@@ -5,6 +5,8 @@
 @import "semantic_bootstrap/base";
 
 $belize_hole: #2980b9;
+$alizarin: #e74c3c;
+$peter_river: #3498db;
 
 a{
   color: $belize_hole;
@@ -34,11 +36,12 @@ time{
 
 footer{
   margin-top: 60px;
-  //border-top: 1px solid $color_main;
-  padding-top: 30px;
+  border-top: 1px solid $peter_river;
+  padding-top: 20px;
   p.lead{
-    font-size: 18px;
-    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: left;
   }
 }
 
@@ -103,7 +106,6 @@ h1, h2, h3, h4, h5{
     font-weight: 400;
   }
   p{
-    @include lead;
     font-size: 18px;
   }
 }
@@ -303,10 +305,16 @@ aside{
 }
 
 #about{
+  margin-top: 30px;
   font-size: 16px;
   line-height: 1.8;
   text-shadow: 1px 1px 1px #FFF;
+  h2{
+    text-align: center;
+    font-weight: 400;
+  }
   h3{
     margin: 40px 0 10px;
+    font-weight: 400;
   }
 }
