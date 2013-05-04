@@ -31,13 +31,7 @@
         <%= yield %>
     </div>
     <footer class="container">
-      <div class="row">
-        <p class="lead span6">
-          Esse projeto tem seu código-fonte aberto, para ter acesso a ele basta entrar em <a href="https://github.com/dukex/adoteumpedido">github.com/dukex/adoteumpedido</a>, todos tipos de contribuições são bem-vindas. Caso tenha alguma sugestão, reclamação, duvida, etc, pode nos contactar por <a href="https://github.com/dukex/adoteumpedido/issues/new">esse formulario</a> ou mandar um email para <a href="http://groups.google.com/group/thackday">Transparência Hacker</a></p>
-        <p class="lead span6"> Desenvolvido e ideializados por
-          membros da comunidade
-          <a href="http://groups.google.com/group/thackday">Transparência Hacker</a>.</p>
-      </div>
+      <%= raw t(:footer, scope: [:application]) %>
     </footer>
   </body>
 </html>
