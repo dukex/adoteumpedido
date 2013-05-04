@@ -9,7 +9,7 @@ namespace :db do
       Comment.create! body: Faker::Lorem.paragraphs(1).join("\n\n"), request_id: Request.all.shuffle.last.id
     end
 
-    AdminUser.create!(:email => 'admin@admin.com', :password => 'abc123', :password_confirmation => 'abc123')
+    # AdminUser.create!(:email => 'admin@admin.com', :password => 'abc123', :password_confirmation => 'abc123')
   end
 end
 
