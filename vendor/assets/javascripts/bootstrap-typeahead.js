@@ -40,6 +40,7 @@
     constructor: Typeahead
 
   , select: function () {
+      if(this.$menu.find('.active').attr('data-value')){
       var val = JSON.parse(this.$menu.find('.active').attr('data-value'))
         , text
 
@@ -53,6 +54,7 @@
 
       this.listen()
       return this.hide()
+      }
     }
 
   , show: function () {
@@ -195,7 +197,7 @@
         .on('keyup',    $.proxy(this.keyup, this))
         .on('click',    $.proxy(this.click, this))
 
-      if ($.browser.webkit || $.browser.msie) {
+      if ($.support.checkOn) {
         this.$element.on('keydown', $.proxy(this.keypress, this))
       }
 
