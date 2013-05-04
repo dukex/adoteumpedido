@@ -14,8 +14,15 @@ namespace :db do
       next if url_name == "body"
       next if url_name.nil? or name.nil?
       next if name.gsub(/\W/, '').empty? or url_name.gsub(/\W/, '').empty?
-      puts "saving #{name} with url: #{url_name}"
-      Authority.create! name: name, url_name: url_name
+
+      if authority = Authority.find_by_url_name(url_name)
+        puts "found ##{authority.id}"
+        puts "updated with #{name}"
+        authority.update_attribute :name, name
+      else
+        puts "creating #{name} with url: #{url_name}"
+        Authority.create! name: name, url_name: url_name
+      end
     end
   end
 end
