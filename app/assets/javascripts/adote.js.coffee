@@ -2,7 +2,9 @@ $(document).ready =>
   $("#search_authority")
     .typeahead
       source: (typeahead, query) ->
-        $.ajax
+        return if query.length < 6
+        window.authority_xhr?.abort()
+        window.authority_xhr = $.ajax
           url: '/authorities'
           data: {query: query}
           success: (data, status, xhr)=>
