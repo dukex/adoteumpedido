@@ -8,7 +8,7 @@
         <input class="span7" id="search_authority" type="text">
         <p class="inline-hints span5"><%= t(:search_authority, scope: [:formtastic, :hints, :request]) %> </p>
       </li>
-      <%= f.input :authority, as: :string, input_html: {id: "authority", readonly: true, class: "span7"} %>
+      <%= f.input :authority, as: :string, input_html: {id: "authority", readonly: true, class: "span7", value: @request.authority.try(:name)} %>
       <%= f.input :resume, input_html: {class: "span7"} %>
       <%= f.input :description, input_html: {class: "span7"} %>
       <%= f.input :observation, input_html: {rows: "5", class: "span7"} %>
