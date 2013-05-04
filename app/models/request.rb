@@ -1,6 +1,6 @@
 class Request < ActiveRecord::Base
   attr_accessible :description, :observation, :resume, :authority_id
-  default_scope order("id DESC").includes(:comments)
+  default_scope order("id DESC").includes([:comments, :adopts])
   has_many :comments
   has_many :adopts
 
