@@ -42,7 +42,9 @@
       request:
         create: "Doar Pedido!"
       user:
-        create: "Entrar"
+        forgot_password: "Resetar Senha"
+        sign_in: "Entrar"
+        sign_up: "Cadastrar"
     hints: #dicas sobre os campos ao lado
       request:
         resume: "Um resumo de uma linha sobre a informação que você está pedindo, como se fosse o assunto de um e-mail. Exemplo: 'Estatísticas de crime por bairro na cidade de São Paulo'"
@@ -84,6 +86,7 @@
     user:
       sign_in: "Login"
       sign_up: "Registrar"
+      forgot_password: "Esqueci Minha Senha"
     adopt:
       show: "Adoções desse pedido"
       comments: "Comentários desse pedido"

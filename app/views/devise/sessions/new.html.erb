@@ -10,7 +10,7 @@
     <% end %>
     <%= render "devise/shared/links" %>
     <%= f.actions do %>
-      <%= f.action :submit, :as => :button, button_html: {class: 'btn span2'} %>
+      <%= f.action :submit, :as => :button, button_html: {class: 'btn span2'}, label: t(:sign_in, scope: [:formtastic, :actions, :user]) %>
     <% end %>
   <% end %>
 
