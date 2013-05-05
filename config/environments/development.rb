@@ -48,4 +48,6 @@ AdoteSeuPedido::Application.configure do
       rescue LoadError
       end
   end
+
+  config.asset_host = "http://localhost:3000"
 end
