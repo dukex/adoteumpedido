@@ -98,7 +98,24 @@
       create: "Pedido para Adoção"
       observation: "Comentário do doador:"
       description: "Texto do pedido feito pelo doador"
+    emails:
+      forgot_password:
+        preheader: "Uma solicitação para trocar sua senha foi enviado ao adoteumpedido.info"
+        title: "Trocar Senha"
   texts:
+    emails:
+      sidebar: |
+        <strong>Adote um Pedido</strong><br />
+        O Adote um Pedido veio contornar um obstáculo ao acesso à informação no Brasil: aqui, ao contrário do que acontece em outros países, não é possível solicitar informações dos órgãos públicos de forma anônima.<br /><br />
+        <strong>Por que um registro?</strong><br />
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      forgot_password: |
+        Ola <strong>%{email}!</strong><br /><br />
+        Foi solitado a alteração da sua senha. Você pode trocar sua senha com o
+        link abaixo<br /><br />
+        <a href="%{reset_password_link}">Trocar minha senha</a><br /><br />
+        Caso não tenha sido você que fez essa solicitação, ignore esse email<br />
+        Sua senha não será modificada até que você acesse o link acime e crie uma nova senha
     home: |
       O <strong>Adote um Pedido</strong> veio contornar um obstáculo ao acesso à informação no Brasil: aqui, ao contrário do que acontece em outros países, não é possível solicitar informações dos órgãos públicos de forma anônima.
 
