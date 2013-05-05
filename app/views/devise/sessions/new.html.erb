@@ -1,0 +1,28 @@
+<div id="user_signin" class="user span4 offset2">
+  <h2><%= t(:sign_in, scope: [:titles, :user]) %></h2>
+  <%= semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+    <%= f.inputs do %>
+      <%= f.input :email, input_html: {class: "span4"} %>
+      <%= f.input :password, input_html: {class: "span4"} %>
+      <% if devise_mapping.rememberable? -%>
+        <%= f.input :remember_me, as: :boolean %>
+      <% end %>
+    <% end %>
+    <%= f.actions do %>
+      <%= f.action :submit, :as => :button, button_html: {class: 'btn span2'} %>
+    <% end %>
+  <% end %>
+  <%= render "devise/shared/links" %>
+</div>
+
+<div class="span4 ">
+  <h3>Por que um registro?</h3>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+ quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+ consequat.</p>
+ <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+ cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>

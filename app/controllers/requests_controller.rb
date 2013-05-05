@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   respond_to :json, :html
   before_filter :assign_search, only: [:index]
+  before_filter :authenticate_user!, except: [:new, :create]
 
   def index
     @requests = @search.all

@@ -56,6 +56,9 @@ h2.resume{
 header{
   border-bottom: 2px solid #ecf0f1;
   @include clearfix;
+  .container{
+    position: relative;
+  }
   nav{
     float: right !important;
     max-width: 520px !important;
@@ -317,4 +320,30 @@ aside{
     margin: 40px 0 10px;
     font-weight: 400;
   }
+}
+
+.user{
+  form{
+    li{
+      margin: 0  0 10px 0;
+    }
+    button{
+      margin: 0
+    }
+  }
+  #user_remember_me_input{
+    label{
+      line-height: 12px;
+      input{
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+}
+
+#logged_as{
+  font-size: 12px;
+  position: absolute;
+  top: 2px;
+  right: 0;
 }

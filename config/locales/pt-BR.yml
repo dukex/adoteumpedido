@@ -4,6 +4,11 @@
       request: Pedido
       comment: Comentário
       adopt: Adoção
+    attributes:
+      user:
+        password: "Senha"
+        password_confirmation: "Confirme Sua Senha"
+        remember_me: "Permanecer Logado"
   adopt:
     action:
       new: "Adote esse Pedido"
@@ -17,7 +22,7 @@
       how_to: "Como Funciona"
       new_request: "Doar Pedido"
       show_request: "Pedidos Doados"
-
+    logged_as: "Logado como: <em>%{email}</em> <a href=\"%{sign_out_link}\">Sair</a>"
     footer: |
       <div class="row">
         <p class="lead span6">
@@ -36,6 +41,8 @@
         create: "Comentar Pedido!"
       request:
         create: "Doar Pedido!"
+      user:
+        create: "Entrar"
     hints: #dicas sobre os campos ao lado
       request:
         resume: "Um resumo de uma linha sobre a informação que você está pedindo, como se fosse o assunto de um e-mail. Exemplo: 'Estatísticas de crime por bairro na cidade de São Paulo'"
@@ -69,6 +76,8 @@
   titles:
     about: "Como funciona o Adote um Pedido?"
     home: 'Como assim "adote" um pedido?'
+    user:
+      sign_in: "Login"
     adopt:
       show: "Adoções desse pedido"
       comments: "Comentários desse pedido"

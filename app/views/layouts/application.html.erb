@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title><%= title %></title>
-    <link href='http://fonts.googleapis.com/css?family=Molengo|Clicker+Script|Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="row">
-          <h1 class="span3"> <%= link_to t(:name, scope: [:application]), root_path %> </h1>
-          <nav class="span7">
-            <ul>
-              <li> <%= link_to t(:home, scope: [:application, :navigation]), root_path, :class => (current_page?(root_path) ? "active" : "")  %> </li>
-              <li> <%= link_to t(:how_to, scope: [:application, :navigation]), about_path, :class =>  (current_page?(about_path) ? "active" : "") %> </li>
-              <li> <%= link_to t(:new_request, scope: [:application, :navigation]), new_request_path, :class =>  (current_page?(new_request_path) ? "active" : "") %> </li>
-              <li>
-                <%= link_to t(:show_request, scope: [:application, :navigation]), requests_path, :class => params[:controller] == 'requests' && params[:action] != 'new' ? "active" : "" %>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title><%= title %></title>
+  <link href='http://fonts.googleapis.com/css?family=Molengo|Clicker+Script|Droid+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
     <div class="container">
-        <%= yield %>
+      <% if current_user %>
+      <p id="logged_as">
+        <%= raw t(:logged_as, scope: [:application], email: current_user.email, sign_out_link: destroy_user_session_path) %>
+      </p>
+      <% end %>
+      <div class="row">
+        <h1 class="span3"> <%= link_to t(:name, scope: [:application]), root_path %> </h1>
+        <nav class="span7">
+          <ul>
+            <li> <%= link_to t(:home, scope: [:application, :navigation]), root_path, :class => (current_page?(root_path) ? "active" : "")  %> </li>
+            <li> <%= link_to t(:how_to, scope: [:application, :navigation]), about_path, :class =>  (current_page?(about_path) ? "active" : "") %> </li>
+            <li> <%= link_to t(:new_request, scope: [:application, :navigation]), new_request_path, :class =>  (current_page?(new_request_path) ? "active" : "") %> </li>
+            <li>
+              <%= link_to t(:show_request, scope: [:application, :navigation]), requests_path, :class => params[:controller] == 'requests' && params[:action] != 'new' ? "active" : "" %>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <footer class="container">
-      <%= raw t(:footer, scope: [:application]) %>
-    </footer>
-  </body>
+  </header>
+  <div class="container">
+    <%= yield %>
+  </div>
+  <footer class="container">
+    <%= raw t(:footer, scope: [:application]) %>
+  </footer>
+</body>
 </html>
