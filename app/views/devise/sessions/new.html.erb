@@ -8,12 +8,11 @@
         <%= f.input :remember_me, as: :boolean %>
       <% end %>
     <% end %>
+    <%= render "devise/shared/links" %>
     <%= f.actions do %>
       <%= f.action :submit, :as => :button, button_html: {class: 'btn span2'} %>
     <% end %>
   <% end %>
-  <%= render "devise/shared/links" %>
-</div>
 
 <div class="span4 ">
   <h3>Por que um registro?</h3>

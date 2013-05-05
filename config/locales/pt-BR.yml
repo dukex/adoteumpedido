@@ -58,6 +58,11 @@
       body: "Comentário"
       authority: "Órgão"
       search_authority: "Buscar Órgão"
+  links:
+    user:
+      sign_in: 'Logar'
+      sign_up: 'Registrar'
+      forgot_password: 'Esqueceu Senha?'
   pluralize:
     adopts:
       adopt: 'adoção confirmada'
@@ -78,6 +83,7 @@
     home: 'Como assim "adote" um pedido?'
     user:
       sign_in: "Login"
+      sign_up: "Registrar"
     adopt:
       show: "Adoções desse pedido"
       comments: "Comentários desse pedido"

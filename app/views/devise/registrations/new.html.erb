@@ -1,17 +1,19 @@
 <div id="user_signin" class="user span4 offset2">
   <h2><%= t(:sign_up, scope: [:titles, :user]) %></h2>
   <%= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= f.semantic_errors :email, :password %>
   <%= f.inputs do %>
-    <%= f.input :email, input_html: {class: "span4"}%>
-    <%= f.input :password, input_html: {class: "span4"} %>
-    <%= f.input :password_confirmation, input_html: {class: "span4"} %>
+  <%= f.input :email, input_html: {class: "span4"}%>
+  <%= f.input :password, input_html: {class: "span4"} %>
+  <%= f.input :password_confirmation, input_html: {class: "span4"} %>
   <% end %>
+  <%= render "devise/shared/links" %>
   <%= f.actions do %>
   <%= f.action :submit, :as => :button, button_html: {class: 'btn span2'} %>
   <% end %>
   <% end %>
-</div>
 
+</div>
 <div class="span4">
   <h3>Por que um registro?</h3>
   <p>

@@ -7,6 +7,8 @@
 $belize_hole: #2980b9;
 $alizarin: #e74c3c;
 $peter_river: #3498db;
+$pomegranate: #c0392b;
+$alizarin: #e74c3c;
 
 a{
   color: $belize_hole;
@@ -323,6 +325,23 @@ aside{
 }
 
 .user{
+  ul.user_links{
+    float: left;
+    li{
+      margin: 0;
+      padding: 2px 0;
+    }
+  }
+  ul.errors{
+    border: 1px solid $pomegranate;
+    border-radius: 2px;
+    padding: 3px 5px;
+    background-color: $alizarin;
+    color: #FFF;
+    li{
+      margin: 0
+    }
+  }
   form{
     li{
       margin: 0  0 10px 0;

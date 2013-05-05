@@ -1,0 +1,16 @@
+<ul class="user_links">
+  <%- if controller_name != 'sessions' %>
+  <li><%= link_to t(:sign_in, scope: [:links, :user]), new_session_path(resource_name) %></li>
+  <% end -%>
+  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <li><%= link_to t(:sign_up, scope: [:links, :user]), new_registration_path(resource_name) %></li>
+  <% end -%>
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+  <li><%= link_to t(:forgot_password, scope: [:links, :user]), new_password_path(resource_name) %></li>
+  <% end -%>
+  <%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+  <li><%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %></li>
+  <% end -%>
+  <% end -%>
+</ul>
