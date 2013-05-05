@@ -43,6 +43,7 @@
         create: "Doar Pedido!"
       user:
         forgot_password: "Resetar Senha"
+        edit_password: "Trocar Senha"
         sign_in: "Entrar"
         sign_up: "Cadastrar"
     hints: #dicas sobre os campos ao lado
@@ -87,6 +88,7 @@
       sign_in: "Login"
       sign_up: "Registrar"
       forgot_password: "Esqueci Minha Senha"
+      edit_password: "Trocar Senha"
     adopt:
       show: "Adoções desse pedido"
       comments: "Comentários desse pedido"
