@@ -1,6 +1,7 @@
 class Adopt < ActiveRecord::Base
   attr_accessible :description, :request_id, :resume, :confirmed
   belongs_to :request
+  belongs_to :user
 
   validates :resume, presence: true
   validates :description, presence: true

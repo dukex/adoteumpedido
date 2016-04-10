@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe RequestsController do
+  before do
+    sign_in create(:user)
+  end
+
   describe "GET index" do
     it "should assigns requests" do
       requests = 5.times.map{ create :request }
