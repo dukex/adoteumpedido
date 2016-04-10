@@ -4,7 +4,6 @@ defaults: &DEFAULTS
   pool: 5
   host: localhost
 
-
 development:
   <<: *DEFAULTS
   database: adoteumpedido_dev

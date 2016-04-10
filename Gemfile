@@ -13,14 +13,12 @@ end
 
 group :development do
   gem 'ffaker'
-  gem 'rb-fsevent', '~> 0.9.1'
   gem 'guard-livereload'
   gem 'rack-livereload'
   gem 'letter_opener'
 end
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'pry-rails'
 end
 
@@ -29,8 +27,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
-  gem 'autotest'
-  gem 'ZenTest'
 end
 
 gem 'jquery-rails'
