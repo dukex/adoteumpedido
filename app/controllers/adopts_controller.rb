@@ -13,7 +13,7 @@ class AdoptsController < ApplicationController
   end
 
   def create
-    @adopt = Adopt.create params[:adopt]
+    @adopt = @request.adopts.create permitted_params
     #if @adopt.save
       # redirect_to "http://queremossaber.org.br/pt/new/#{@adopt.request.authority.url_name}?title=#{URI.escape(@adopt.resume)}&default_letter=#{URI.escape(@adopt.description)}"
     #else
@@ -24,6 +24,9 @@ class AdoptsController < ApplicationController
   private
     def assign_request
       @request = Request.find(params[:request_id])
-      params[:adopt][:request_id] = params[:request_id] if params[:adopt]
+    end
+
+    def permitted_params
+      params.require(:adopt).permit(:description, :resume)
     end
 end

@@ -1,5 +1,4 @@
 class Adopt < ActiveRecord::Base
-  attr_accessible :description, :request_id, :resume, :confirmed
   belongs_to :request
   belongs_to :user
 

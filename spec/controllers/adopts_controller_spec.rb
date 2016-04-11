@@ -41,7 +41,7 @@ RSpec.describe AdoptsController do
     end
 
     it "should render new with a invalid adopt" do
-      post :create, adopt: {description: nil}, request_id: request.id
+      post :create, adopt: {description: nil, resume: nil}, request_id: request.id, format: :html
       expect(response).to render_template(:new)
     end
   end

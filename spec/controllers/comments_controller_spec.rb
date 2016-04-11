@@ -7,6 +7,7 @@ RSpec.describe CommentsController do
     it "should create a comment with params" do
       post :create, comment: {body: "Ola Mundo"}, request_id: request.id
       expect(Comment.last.body).to eq("Ola Mundo")
+      expect(Comment.last.request).to eq(request)
     end
 
     it "should redirect to request path" do
