@@ -49,9 +49,9 @@ group :test do
   gem 'simplecov'
 end
 
-gem 'compass-rails', '~> 1.0.3'
-gem 'bourbon'
-gem 'neat'
+gem 'compass-rails', '3.0.2'
+gem 'bourbon', '4.2.6'
+gem 'neat', '1.7.4'
 gem 'devise'
 gem 'formtastic'
 gem 'pg'

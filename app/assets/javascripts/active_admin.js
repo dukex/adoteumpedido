@@ -1,1 +1,1 @@
-//= require active_admin/base
+//= xrequire active_admin/base
