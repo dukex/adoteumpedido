@@ -2,7 +2,7 @@ ActiveAdmin.register Request do
    index do
     column :id
     column :resume
-    default_actions
+    actions
   end
 
   filter :resume
