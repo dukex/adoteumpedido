@@ -47,6 +47,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', '~> 3.0'
   gem 'simplecov'
+  gem 'capybara'
 end
 
 gem 'compass-rails', '3.0.2'
