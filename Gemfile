@@ -1,20 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.16'
+gem 'rails', '4.0.0'
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'compass-rails', '~> 1.0.3'
-  gem 'bourbon'
-  gem 'neat'
-end
+gem 'sass-rails',   '~> 4.0.0'
+gem 'uglifier', '>= 1.0.3'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.2'
 
 group :development do
   gem 'ffaker'
-  gem 'guard-livereload'
-  gem 'rack-livereload'
   gem 'letter_opener'
 end
 
@@ -25,10 +20,13 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 3.0'
   gem 'simplecov'
 end
 
+gem 'compass-rails', '~> 1.0.3'
+gem 'bourbon'
+gem 'neat'
 gem 'jquery-rails'
 gem 'devise'
 gem 'formtastic'
@@ -37,6 +35,6 @@ gem 'responders'
 gem 'diffy'
 gem 'inploy'
 gem 'unicorn'
-gem 'meta_search'
-gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'activerecord-reputation-system'
+gem 'strong-parameters'
+gem 'protected_attributes'

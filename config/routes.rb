@@ -1,8 +1,8 @@
 AdoteSeuPedido::Application.routes.draw do
   devise_for :users
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self)
+  # devise_for :admin_users, ActiveAdmin::Devise.config
+  # ActiveAdmin.routes(self)
 
   get "authorities" => "authority#index"
 
@@ -11,6 +11,6 @@ AdoteSeuPedido::Application.routes.draw do
     resources :adopts, only: [:new, :show, :create]
   end
 
-  match "/entenda" => "application#about", as: 'about'
+  get "/entenda" => "application#about", as: 'about'
   root to: "application#index"
 end

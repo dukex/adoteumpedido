@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Request do
+RSpec.describe Request do
   it { should have_many(:comments) }
   it { should have_many(:adopts) }
   it { should belong_to(:authority)}

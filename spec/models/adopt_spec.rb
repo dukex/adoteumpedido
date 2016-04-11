@@ -1,6 +1,6 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Adopt do
+RSpec.describe Adopt do
   it { should belong_to(:request) }
   it { should belong_to(:user) }
   it { should validate_presence_of :resume }
