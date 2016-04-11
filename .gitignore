@@ -19,3 +19,4 @@ coverage/
 config/database.yml
 public/assets
 .DS_Store
+spec/examples.txt
